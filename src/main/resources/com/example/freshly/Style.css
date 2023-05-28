@@ -1,0 +1,37 @@
+
+.LoginText{
+    -fx-font-family: IRANSans;
+    -fx-text-fill: #007E7B;
+    -fx-border-color: black;
+    -fx-border-width: 0px 3px 0px 0px;
+}
+.EmailText{
+    -fx-font-family: IRANSans;
+    -fx-text-fill: #007E7B;
+}
+.section{
+    -fx-background-color: linear-gradient(to bottom left , #4A154B , #892A57,#C04F57,#E88152,#FBBA55,#F9F871);
+}
+.forgotpassword{
+    -fx-font-family: IRANSans;
+    -fx-text-fill: #007E7B;
+    -fx-text-alignment: none;
+}
+.contentPane{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 30, 0, 0, 0);
+    -fx-border-color: white;
+    -fx-border-radius: 30px;
+}
+.loginButton{
+    -fx-background-radius: 4px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 5, 0, 0, 0);
+    -fx-background-color: #4a154b;
+    -fx-font-family: "B Yekan+";
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+.loginButton:hover{
+    -fx-background-color: #007E7B;
+}
