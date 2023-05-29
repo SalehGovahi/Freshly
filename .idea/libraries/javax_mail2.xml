@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="javax.mail2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../DataBases_jarfile_/Gmail/javax.mail.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
