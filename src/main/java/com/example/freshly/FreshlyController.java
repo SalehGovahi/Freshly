@@ -94,10 +94,15 @@ public class FreshlyController implements Initializable {
     @FXML
     private TextField VerificationٍEmailTextField;
 
+    @FXML
+    private ComboBox<?> ChooseRoleComboBoxLoginPane;
+
     private Connection connect;
     private PreparedStatement prepare;
     private Statement statement;
+    private Statement statement1;
     private ResultSet result;
+    private ResultSet result1;
     private Alert alert;
 
     private final String EMAIL_REGEX =
@@ -113,6 +118,7 @@ public class FreshlyController implements Initializable {
 
         ObservableList DataList= FXCollections.observableArrayList(ItemList);
         ChooseRoleComboBox.setItems(DataList);
+        ChooseRoleComboBoxLoginPane.setItems(DataList);
     }
 
     @FXML
@@ -178,32 +184,58 @@ public class FreshlyController implements Initializable {
     }
     public void getLogin(ActionEvent e){
         if (e.getSource()==LoginButton){
-            if (CheckFieldsLoginPane()){
+            if (CheckFieldsLoginPane()) {
                 connect = database.connectDB();
-                try {
-                    statement=connect.createStatement();
-                    result = statement.executeQuery("SELECT Username , Password FROM costumer  WHERE Username = '"+UsenameTextFieldLoginPane.getText()+"' AND Password='"+PasswordfTextFieldLoginPane.getText()+"'");
-                    if (result.next()){
-                        //Todo Login Works
-                        System.out.println("Login Successfully");
-                        alert = new Alert(Alert.AlertType.INFORMATION);
-                        alert.setTitle("Information");
-                        alert.setHeaderText(null);
-                        alert.setContentText("Login Successfully");
-                        alert.showAndWait();
-                    }else {
-                        //Todo Incorrect Pass/User
-                        System.out.println("Incorrect Pass/User");
-                        alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setTitle("Error Message");
-                        alert.setHeaderText(null);
-                        alert.setContentText("Incorrect Pass/User");
-                        alert.showAndWait();
+                if (ChooseRoleComboBoxLoginPane.getSelectionModel().getSelectedItem() == "خریدار") {
+                    try {
+                        statement = connect.createStatement();
+                        result = statement.executeQuery("SELECT Username , Password FROM costumer  WHERE Username = '" + UsenameTextFieldLoginPane.getText() + "' AND Password='" + PasswordfTextFieldLoginPane.getText() + "'");
+                        if (result.next()) {
+                            //Todo Login Works
+                            System.out.println("Login Successfully");
+                            alert = new Alert(Alert.AlertType.INFORMATION);
+                            alert.setTitle("Information");
+                            alert.setHeaderText(null);
+                            alert.setContentText("Login Successfully");
+                            alert.showAndWait();
+                        } else {
+                            //Todo Incorrect Pass/User
+                            System.out.println("Incorrect Pass/User");
+                            alert = new Alert(Alert.AlertType.ERROR);
+                            alert.setTitle("Error Message");
+                            alert.setHeaderText(null);
+                            alert.setContentText("Incorrect Pass/User");
+                            alert.showAndWait();
+                        }
+                    } catch (Exception exception) {
+                        System.out.println(exception.getMessage());
                     }
-                }catch (Exception exception){
-                    System.out.println(exception.getMessage());
-                }
 
+                } else if (ChooseRoleComboBoxLoginPane.getSelectionModel().getSelectedItem()=="فروشنده") {
+                    try {
+                        statement = connect.createStatement();
+                        result = statement.executeQuery("SELECT Username , Password FROM seller  WHERE Username = '" + UsenameTextFieldLoginPane.getText() + "' AND Password='" + PasswordfTextFieldLoginPane.getText() + "'");
+                        if (result.next()) {
+                            //Todo Login Works
+                            System.out.println("Login Successfully");
+                            alert = new Alert(Alert.AlertType.INFORMATION);
+                            alert.setTitle("Information");
+                            alert.setHeaderText(null);
+                            alert.setContentText("Login Successfully");
+                            alert.showAndWait();
+                        } else {
+                            //Todo Incorrect Pass/User
+                            System.out.println("Incorrect Pass/User");
+                            alert = new Alert(Alert.AlertType.ERROR);
+                            alert.setTitle("Error Message");
+                            alert.setHeaderText(null);
+                            alert.setContentText("Incorrect Pass/User");
+                            alert.showAndWait();
+                        }
+                    } catch (Exception exception) {
+                        System.out.println(exception.getMessage());
+                    }
+                }
             }else {
                 //Todo anything is Empty
                 alert = new Alert(Alert.AlertType.ERROR);
@@ -217,7 +249,8 @@ public class FreshlyController implements Initializable {
     private Boolean CheckFieldsLoginPane(){
         boolean result ;
         if (UsenameTextFieldLoginPane.getText().isEmpty() ||
-                PasswordfTextFieldLoginPane.getText().isEmpty()){
+                PasswordfTextFieldLoginPane.getText().isEmpty()||
+                ChooseRoleComboBoxLoginPane.getSelectionModel().getSelectedItem()==null){
             result = false;
         }else {
             result=true;
@@ -230,15 +263,16 @@ public class FreshlyController implements Initializable {
                 connect=database.connectDB();
                 try{
                     statement=connect.createStatement();
+                    statement1 = connect.createStatement();
                     if (ChooseRoleComboBox.getSelectionModel().getSelectedItem()=="خریدار") {
-                        result = statement.executeQuery("SELECT Username FROM costumer WHERE UserName = '"+UsernameTextField.getText()+"'");
-                        if (result.next()){
-                            //Todo Username has taken
+                        result = statement.executeQuery("SELECT Username,EmailAddress FROM costumer WHERE UserName = '"+UsernameTextField.getText()+"' AND EmailAddress = '"+EmailTextField.getText()+"'");
+                        result1 = statement1.executeQuery("SELECT EmailAddress FROM seller WHERE EmailAddress = '"+EmailTextField.getText()+"'");
+                        if (result1.next() || result.next()){
                             System.out.println("already taken");
                             alert = new Alert(Alert.AlertType.ERROR);
                             alert.setTitle("Error Message");
                             alert.setHeaderText(null);
-                            alert.setContentText("Username has already taken");
+                            alert.setContentText("Username/EmailAddress has already taken");
                             alert.showAndWait();
                         }
                         else {
@@ -274,14 +308,15 @@ public class FreshlyController implements Initializable {
                         }
                     }
                     if (ChooseRoleComboBox.getSelectionModel().getSelectedItem()=="فروشنده") {
-                        result = statement.executeQuery("SELECT Username FROM seller WHERE UserName = '"+UsernameTextField.getText()+"'");
-                        if (result.next()){
+                        result = statement.executeQuery("SELECT Username,EmailAddress FROM seller WHERE UserName = '"+UsernameTextField.getText()+"' AND EmailAddress = '"+EmailTextField.getText()+"'");
+                        result1 = statement1.executeQuery("SELECT EmailAddress FROM costumer WHERE EmailAddress = '"+EmailTextField.getText()+"'");
+                        if (result.next() || result1.next()){
                             //Todo Username has taken
                             System.out.println("already taken");
                             alert = new Alert(Alert.AlertType.ERROR);
                             alert.setTitle("Error Message");
                             alert.setHeaderText(null);
-                            alert.setContentText("Username has already taken");
+                            alert.setContentText("Username/EmailAddress has already taken");
                             alert.showAndWait();
                         }
                         else {
@@ -330,7 +365,7 @@ public class FreshlyController implements Initializable {
         }
     }
     private Boolean checkFieldsSignUpPane(){
-        Boolean result=false;
+        boolean result=false;
         if (UsernameTextField.getText().isEmpty() ||
                 PasswordTextField.getText().isEmpty() ||
                 NameTextField.getText().isEmpty() ||
@@ -338,7 +373,7 @@ public class FreshlyController implements Initializable {
                 PhoneNumberTextField.getText().isEmpty()||
                 ChooseRoleComboBox.getSelectionModel().getSelectedItem()==null||
                 EmailTextField.getText().isEmpty()){
-            result=false;
+
         }else {
             result=true;
         }
@@ -350,7 +385,6 @@ public class FreshlyController implements Initializable {
         NameTextField.setText("");
         FamilyTextField.setText("");
         PhoneNumberTextField.setText("");
-        ChooseRoleComboBox.setSelectionModel(null);
         EmailTextField.setText("");
     }
     public void rememberForgotPasswordToClient(ActionEvent actionEvent){
@@ -361,17 +395,40 @@ public class FreshlyController implements Initializable {
                 try {
                     if (isValidEmail(VerificationٍEmailTextField.getText())) {
                         statement = connect.createStatement();
+                        statement1=connect.createStatement();
                         result = statement.executeQuery("SELECT Password FROM costumer WHERE EmailAddress = '" + VerificationٍEmailTextField.getText() + "'");
+                        result1 = statement1.executeQuery("SELECT Password FROM seller WHERE EmailAddress = '" + VerificationٍEmailTextField.getText() + "'");
                         if (result.next()) {
                             String pass = result.getString("Password");
                             int successfulEmailSend = 0;
                             successfulEmailSend = EmailSender.sendEmail(VerificationٍEmailTextField.getText(),pass);
                             if (successfulEmailSend == 1) {
+                                alert = new Alert(Alert.AlertType.INFORMATION);
+                                alert.setTitle("Information Message");
+                                alert.setHeaderText(null);
+                                alert.setContentText("Your Password Sent");
+                                alert.showAndWait();
                                 System.out.println("Done");
+                                VerificationٍEmailTextField.setText("");
                             } else if (successfulEmailSend == 0) {
                                 System.out.println("fail");
                             }
-                        }else {
+                        } else if (result1.next()) {
+                            String pass = result1.getString("Password");
+                            int successfulEmailSend = 0;
+                            successfulEmailSend = EmailSender.sendEmail(VerificationٍEmailTextField.getText(),pass);
+                            if (successfulEmailSend == 1) {
+                                alert = new Alert(Alert.AlertType.INFORMATION);
+                                alert.setTitle("Information Message");
+                                alert.setHeaderText(null);
+                                alert.setContentText("Your Password Sent");
+                                alert.showAndWait();
+                                System.out.println("Done");
+                                VerificationٍEmailTextField.setText("");
+                            } else if (successfulEmailSend == 0) {
+                                System.out.println("fail");
+                            }
+                        } else {
                             alert = new Alert(Alert.AlertType.ERROR);
                             alert.setTitle("Error Message");
                             alert.setHeaderText(null);
