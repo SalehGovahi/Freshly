@@ -9,5 +9,11 @@
         <module name="LearningJavafx" />
       </profile>
     </annotationProcessing>
+<<<<<<< Updated upstream
+=======
+    <bytecodeTargetLevel>
+      <module name="LearningJavafx" target="19" />
+    </bytecodeTargetLevel>
+>>>>>>> Stashed changes
   </component>
 </project>

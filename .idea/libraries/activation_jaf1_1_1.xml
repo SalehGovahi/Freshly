@@ -2,6 +2,10 @@
   <library name="activation-jaf1.1.1">
     <CLASSES>
       <root url="jar://F:/Api/Gmail/activation-jaf1.1.1.jar!/" />
+<<<<<<< Updated upstream
+=======
+      <root url="jar://F:/Api/Gmail/javax.mail.jar!/" />
+>>>>>>> Stashed changes
     </CLASSES>
     <JAVADOC />
     <SOURCES />
