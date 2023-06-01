@@ -10,7 +10,7 @@
    <children>
       <ImageView fx:id="ProductsImage" fitHeight="223.0" fitWidth="246.0" layoutX="12.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../Assets/temp2.jpg" />
+            <Image url="@Assets/temp2.jpg" />
          </image></ImageView>
       <Label fx:id="ProductName" alignment="CENTER" layoutX="53.0" layoutY="217.0" prefHeight="59.0" prefWidth="230.0" styleClass="Texts" stylesheets="@ProductLabel.css" text="کالباس گوشت مرغ 90 درصد ماسیس">
          <font>
@@ -23,12 +23,12 @@
       </Label>
       <ImageView fitHeight="26.0" fitWidth="22.0" layoutX="10.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../Assets/Toman.png" />
+            <Image url="@Assets/Toman.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="26.0" fitWidth="22.0" layoutX="10.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../Assets/Star.png" />
+            <Image url="@Assets/Star.png" />
          </image>
       </ImageView>
       <Label fx:id="ProductRate" layoutX="36.0" layoutY="274.0" styleClass="Texts" stylesheets="@ProductLabel.css" text="4.2">
@@ -38,7 +38,7 @@
       </Label>
       <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="234.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../Assets/Delivery.png" />
+            <Image url="@Assets/Delivery.png" />
          </image>
       </ImageView>
       <Label layoutX="184.0" layoutY="276.0" styleClass="Delivery" stylesheets="@ProductLabel.css" text="ارسال سریع">

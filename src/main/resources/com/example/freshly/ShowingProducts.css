@@ -12,12 +12,16 @@
     -fx-text-fill: #3f4064;
     -fx-font-family: "B Yekan+";
     -fx-font-weight: Bold;
+    -fx-font-size: 24px;
+    -fx-minimum-font-size: 24px;
 }
 
 .filtersNames{
     -fx-text-fill: #3f4064;
     -fx-font-family: "B Yekan+";
     -fx-font-weight: Bold;
+    -fx-font-size: 16px;
+    -fx-minimum-font-size: 16px;
 }
 
 .filtersLine{

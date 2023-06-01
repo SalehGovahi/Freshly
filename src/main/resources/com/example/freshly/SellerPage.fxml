@@ -32,7 +32,7 @@
                               </Label>
                               <ImageView fitHeight="198.0" fitWidth="198.0" layoutX="20.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../../Assets/logoSellerPage.png" />
+                                    <Image url="@Assets/logoSellerPage.png" />
                                  </image>
                               </ImageView>
                            </children>
@@ -52,9 +52,9 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="157.0" layoutY="644.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="157.0" layoutY="636.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../Assets/HeaderIcons/logoutButton.png" />
+                              <Image url="@Assets/HeaderIcons/logoutButton.png" />
                            </image>
                         </ImageView>
                         <Button alignment="TOP_CENTER" layoutX="39.0" layoutY="636.0" minWidth="53.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="126.0" styleClass="logoutButton" text="خروج از حساب کاربری">

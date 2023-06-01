@@ -2,18 +2,22 @@ package com.example.freshly;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.NodeOrientation;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.scene.control.skin.ComboBoxListViewSkin;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
+import org.w3c.dom.events.Event;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -33,7 +37,8 @@ public class ShowingProducts implements Initializable {
     @FXML
     private GridPane ProductsGridPane;
 
-
+    @FXML
+    private TextField SearchTextField;
 
     ObservableList<Product> cardListData = FXCollections.observableArrayList();
 
@@ -97,6 +102,10 @@ public class ShowingProducts implements Initializable {
         }
     }
 
+    public void FixSearchTextField(MouseEvent event){
+        SearchTextField.requestFocus();
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -108,4 +117,5 @@ public class ShowingProducts implements Initializable {
             e.printStackTrace();
         }
     }
+
 }

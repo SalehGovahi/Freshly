@@ -28,9 +28,9 @@
                               <Font name="Arial Bold" size="17.0" />
                            </font>
                         </Label>
-                        <ImageView fitHeight="230.0" fitWidth="219.0" layoutX="128.0" layoutY="-61.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="230.0" fitWidth="219.0" layoutX="128.0" layoutY="-54.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../Freshly/Assets/freshlyText.png" />
+                              <Image url="@Assets/freshlyText.png" />
                            </image>
                         </ImageView>
                         <PasswordField fx:id="PasswordfTextFieldLoginPane" alignment="CENTER_RIGHT" layoutX="73.0" layoutY="200.0" prefHeight="39.0" prefWidth="329.0" promptText="رمز عبور" />
@@ -54,7 +54,7 @@
                               <Font name="Arial Bold" size="24.0" />
                            </font>
                         </Label>
-                        <ImageView fitHeight="230.0" fitWidth="219.0" layoutX="129.0" layoutY="-86.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="230.0" fitWidth="219.0" layoutX="129.0" layoutY="-68.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../../../../../Freshly/Assets/freshlyText.png" />
                            </image>
@@ -86,7 +86,7 @@
                         </Label>
                         <ImageView fitHeight="230.0" fitWidth="219.0" layoutX="127.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../Freshly/Assets/freshlyText.png" />
+                              <Image url="@Assets/freshlyText.png" />
                            </image>
                         </ImageView>
                         <Button fx:id="ConfirmEmailButton" alignment="CENTER" cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" layoutX="73.0" layoutY="306.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="329.0" scaleShape="false" styleClass="loginButton" stylesheets="@Style.css" text="تایید" textAlignment="CENTER" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
@@ -115,7 +115,7 @@
                         </Label>
                         <ImageView fitHeight="230.0" fitWidth="219.0" layoutX="127.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../Freshly/Assets/freshlyText.png" />
+                              <Image url="@Assets/freshlyText.png" />
                            </image>
                         </ImageView>
                         <Button fx:id="ConfirmCodeButton" alignment="CENTER" cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" layoutX="73.0" layoutY="306.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="329.0" scaleShape="false" styleClass="loginButton" stylesheets="@Style.css" text="تایید" textAlignment="CENTER" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">

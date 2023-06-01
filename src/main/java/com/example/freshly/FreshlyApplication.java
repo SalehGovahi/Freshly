@@ -12,7 +12,7 @@ public class FreshlyApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         // Load the FXML file for the new scene
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("ShowingProducts.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("MainPage.fxml"));
         Parent root = loader.load();
 
         // Create a new scene with the loaded FXML file as the root node

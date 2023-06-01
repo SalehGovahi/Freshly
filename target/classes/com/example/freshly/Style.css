@@ -1,9 +1,11 @@
 
 .LoginText{
     -fx-font-family: IRANSans;
+    -fx-font-weight: Bold;
     -fx-text-fill: #007E7B;
     -fx-border-color: black;
     -fx-border-width: 0px 3px 0px 0px;
+    -fx-font-size: 24px;
 }
 .EmailText{
     -fx-font-family: IRANSans;

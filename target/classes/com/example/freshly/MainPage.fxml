@@ -20,7 +20,7 @@
          <children>
             <ImageView fitHeight="60.0" fitWidth="158.0" layoutX="1040.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Assets/logoHeader.png" />
+                  <Image url="@Assets/logoHeader.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -36,7 +36,7 @@
                <children>
                   <ImageView fitHeight="30.0" fitWidth="51.0" layoutX="93.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" rotate="-180.0">
                      <image>
-                        <Image url="@../../../../../../Assets/HeaderIcons/login.png" />
+                        <Image url="@Assets/HeaderIcons/login.png" />
                      </image>
                   </ImageView>
                   <Label alignment="CENTER" layoutX="-25.0" layoutY="-2.0" prefHeight="41.0" prefWidth="150.0" styleClass="loginText" stylesheets="@MainPage.css" text="ورود | ثبت نام">
@@ -52,7 +52,7 @@
             <Line endX="25.0" layoutX="58.0" layoutY="33.0" opacity="0.3" rotate="90.0" />
             <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="26.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Assets/HeaderIcons/cart.png" />
+                  <Image url="@Assets/HeaderIcons/cart.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -76,7 +76,7 @@
          <children>
             <ImageView fitHeight="50.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Assets/Advertisment.gif" />
+                  <Image url="@Assets/Advertisment.gif" />
                </image>
             </ImageView>
          </children>
@@ -119,7 +119,7 @@
                            <children>
                               <ImageView fitHeight="398.0" fitWidth="941.0" layoutX="-8.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../../Assets/AuctionBanner%20copy.png" />
+                                    <Image url="@Assets/AuctionBanner%20copy.png" />
                                  </image>
                               </ImageView>
                            </children>
@@ -163,12 +163,12 @@
                         </Button>
                         <ImageView fitHeight="155.0" fitWidth="191.0" layoutX="1022.0" layoutY="-41.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../Assets/logo%20footer.png" />
+                              <Image url="@Assets/logoFooter.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="182.0" fitWidth="360.0" layoutX="813.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../Assets/DescriptionTextFooter.png" />
+                              <Image url="@Assets/DescriptionTextFooter.png" />
                            </image>
                         </ImageView>
                         <Circle fill="DODGERBLUE" layoutX="693.0" layoutY="75.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke-width: 0px;" />
@@ -189,12 +189,12 @@
                         <Circle fill="DODGERBLUE" layoutX="424.0" layoutY="129.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke-width: 0px;" />
                         <ImageView fitHeight="127.0" fitWidth="99.0" layoutX="31.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../Assets/etemadLogoFooter.png" />
+                              <Image url="@Assets/etemadLogoFooter.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="127.0" fitWidth="99.0" layoutX="143.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../Assets/neshanLogoFooter.png" />
+                              <Image url="@Assets/neshanLogoFooter.png" />
                            </image>
                         </ImageView>
                      </children>
