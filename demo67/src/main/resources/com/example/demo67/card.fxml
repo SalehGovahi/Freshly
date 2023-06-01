@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo67.Card">
+   <children>
+      <Button layoutX="143.0" layoutY="159.0" mnemonicParsing="false" onAction="#print" text="add" />
+      <Label fx:id="name" layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="37.0" text="name" />
+      <Label fx:id="brand" layoutX="77.0" layoutY="163.0" text="brand" />
+      <Label fx:id="price" layoutX="93.0" layoutY="14.0" prefHeight="18.0" prefWidth="50.0" text="price" />
+      <Label fx:id="point" layoutX="13.0" layoutY="163.0" prefHeight="18.0" prefWidth="38.0" text="point" />
+      <AnchorPane layoutX="13.0" layoutY="39.0" prefHeight="115.0" prefWidth="170.0">
+         <children>
+            <ImageView fx:id="imageview" fitHeight="115.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

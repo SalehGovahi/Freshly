@@ -20,9 +20,9 @@
             <children>
                 <AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="section" stylesheets="@Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
-                        <Pane fx:id="LoginPane" layoutX="263.0" layoutY="59.0" prefHeight="475.0" prefWidth="475.0" styleClass="contentPane" stylesheets="@Style.css">
+                        <Pane fx:id="LoginPane" layoutX="263.0" layoutY="59.0" prefHeight="475.0" prefWidth="475.0" styleClass="contentPane" stylesheets="@Style.css" AnchorPane.bottomAnchor="65.80000000000001" AnchorPane.leftAnchor="263.00000000000006" AnchorPane.rightAnchor="261.8" AnchorPane.topAnchor="59.0">
                             <children>
-                                <TextField fx:id="UsenameTextFieldLoginPane" alignment="CENTER_RIGHT" layoutX="73.0" layoutY="158.0" prefHeight="39.0" prefWidth="329.0" promptText="نام کاربری" />
+                                <TextField fx:id="UsenameTextFieldLoginPane" alignment="CENTER_RIGHT" layoutX="73.0" layoutY="158.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="39.0" prefWidth="329.0" promptText="نام کاربری" />
                                 <Label fx:id="LoginText" alignment="CENTER_RIGHT" ellipsisString="15" layoutX="200.0" layoutY="107.0" prefHeight="39.0" prefWidth="200.0" styleClass="LoginText" stylesheets="@Style.css" text=" ورود به حساب کاربری" textFill="WHITE" textOverrun="CLIP">
                                     <font>
                                         <Font name="Arial Bold" size="17.0" />
