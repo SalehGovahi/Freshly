@@ -1,5 +1,6 @@
 package com.example.freshly;
 
+<<<<<<< Updated upstream
 import java.sql.*;
 
 public class database {
@@ -19,5 +20,20 @@ public class database {
         return null;
     }
 
+=======
+import java.sql.Connection;
+import java.sql.DriverManager;
+>>>>>>> Stashed changes
 
+public class database
+{
+//    public Connection connectDB(){
+//        try {
+//            Class.forName("com.mysql.jdbc.Driver");
+//
+//            //Connection connection = DriverManager.getConnection("")
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//    }
 }

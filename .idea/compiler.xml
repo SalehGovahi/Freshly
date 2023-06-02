@@ -9,5 +9,11 @@
         <module name="Freshly" />
       </profile>
     </annotationProcessing>
+<<<<<<< Updated upstream
+=======
+    <bytecodeTargetLevel>
+      <module name="LearningJavafx" target="18" />
+    </bytecodeTargetLevel>
+>>>>>>> Stashed changes
   </component>
 </project>

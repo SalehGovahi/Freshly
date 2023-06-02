@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="270.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freshly.ProductLabel">
+   <children>
+      <ImageView fx:id="ProductsImage" fitHeight="223.0" fitWidth="246.0" layoutX="12.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/temp2.jpg" />
+         </image></ImageView>
+      <Label fx:id="ProductName" alignment="CENTER" layoutX="53.0" layoutY="217.0" prefHeight="59.0" prefWidth="230.0" styleClass="Texts" stylesheets="@ProductLabel.css" text="کالباس گوشت مرغ 90 درصد ماسیس">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label fx:id="ProductPrice" layoutX="36.0" layoutY="310.0" prefHeight="27.0" prefWidth="83.0" styleClass="Texts" stylesheets="@ProductLabel.css" text="99,500">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="26.0" fitWidth="22.0" layoutX="10.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/Toman.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="22.0" layoutX="10.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/Star.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="ProductRate" layoutX="36.0" layoutY="274.0" styleClass="Texts" stylesheets="@ProductLabel.css" text="4.2">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="234.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/Delivery.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="184.0" layoutY="276.0" styleClass="Delivery" stylesheets="@ProductLabel.css" text="ارسال سریع">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="AddToCartButton" fitHeight="30.0" fitWidth="30.0" layoutX="231.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Assets/AddIcon.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

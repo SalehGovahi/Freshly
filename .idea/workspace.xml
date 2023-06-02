@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="1607ef45-f548-4870-b5ba-33750abfc745" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/libraries/activation_jaf1_1_12.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/javax_mail2.xml" afterDir="false" />
@@ -12,18 +13,15 @@
       <change afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_41_2_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freshly/database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freshly/database.java" afterDir="false" />
+=======
+    <list default="true" id="795cefbc-8b85-4e19-b0b3-f458e6207f5d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freshly/FreshlyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freshly/FreshlyApplication.java" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,11 +29,23 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+<<<<<<< Updated upstream
   <component name="ProjectId" id="2QPwcnNcTK5RCd3CvOZ8NuGfvpy" />
+=======
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Qb3fRE9jA5pAkhqncbhNyxqqgJ" />
+>>>>>>> Stashed changes
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< Updated upstream
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -73,6 +83,25 @@
       <updated>1685268606024</updated>
       <workItem from="1685268610210" duration="371000" />
       <workItem from="1685343680041" duration="189000" />
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Sobhan/Desktop/demo67"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="795cefbc-8b85-4e19-b0b3-f458e6207f5d" name="Changes" comment="" />
+      <created>1685608556544</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685608556544</updated>
+      <workItem from="1685608558225" duration="2895000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>

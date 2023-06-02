@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freshly.FreshlyController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="section" stylesheets="@Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Pane fx:id="LoginPane" layoutX="263.0" layoutY="59.0" prefHeight="475.0" prefWidth="475.0" styleClass="contentPane" stylesheets="@Style.css" visible="false">
+                     <children>
+                        <TextField fx:id="UsenameTextFieldLoginPane" alignment="CENTER_RIGHT" layoutX="73.0" layoutY="146.0" prefHeight="39.0" prefWidth="329.0" promptText="نام کاربری" />
+                        <Label fx:id="LoginText" alignment="CENTER_RIGHT" ellipsisString="15" layoutX="200.0" layoutY="101.0" prefHeight="39.0" prefWidth="200.0" styleClass="LoginText" stylesheets="@Style.css" text=" ورود به حساب کاربری" textFill="WHITE" textOverrun="CLIP">
+                           <font>
+                              <Font name="Arial Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="230.0" fitWidth="219.0" layoutX="128.0" layoutY="-54.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/freshlyText.png" />
+                           </image>
+                        </ImageView>
+                        <PasswordField fx:id="PasswordfTextFieldLoginPane" alignment="CENTER_RIGHT" layoutX="73.0" layoutY="200.0" prefHeight="39.0" prefWidth="329.0" promptText="رمز عبور" />
+                        <Hyperlink fx:id="ForgotPassword" alignment="CENTER" contentDisplay="CENTER" layoutX="147.0" layoutY="302.0" onAction="#SwitchToForgotPasswordPage" prefHeight="30.0" prefWidth="183.0" styleClass="forgotpassword" stylesheets="@Style.css" text="رمز عبور را فراموش کرده اید؟" textAlignment="CENTER" textFill="WHITE" />
+                        <Button fx:id="LoginButton" alignment="CENTER" cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" layoutX="73.0" layoutY="343.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="329.0" scaleShape="false" styleClass="loginButton" stylesheets="@Style.css" text="ورود" textAlignment="CENTER" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Hyperlink fx:id="DontHaveAnAccount" alignment="CENTER" contentDisplay="CENTER" layoutX="151.0" layoutY="393.0" onAction="#SwitchToForgotSignupPage" prefHeight="24.0" prefWidth="174.0" styleClass="forgotpassword" stylesheets="@Style.css" text="حساب کاربری ندارید؟" textAlignment="CENTER" textFill="WHITE" />
+                        <ComboBox fx:id="ChooseRoleComboBoxLoginPane" layoutX="74.0" layoutY="255.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="39.0" prefWidth="329.0" promptText="نقش خود را انتخاب کنید" styleClass="forgotpassword" stylesheets="@Style.css" visibleRowCount="3" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="SignupPane" layoutX="263.0" layoutY="59.0" prefHeight="475.0" prefWidth="475.0" styleClass="contentPane" stylesheets="@Style.css">
+                     <children>
+                        <Label fx:id="CreateAccountText" alignment="CENTER_RIGHT" ellipsisString="15" layoutX="206.0" layoutY="65.0" prefHeight="39.0" prefWidth="200.0" styleClass="LoginText" stylesheets="@Style.css" text=" ثبت نام" textFill="WHITE" textOverrun="CLIP">
+                           <font>
+                              <Font name="Arial Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="230.0" fitWidth="219.0" layoutX="129.0" layoutY="-68.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Freshly/Assets/freshlyText.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="CreateAccountButton" alignment="CENTER" cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" layoutX="75.0" layoutY="380.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="329.0" scaleShape="false" styleClass="loginButton" stylesheets="@Style.css" text="ثبت نام" textAlignment="CENTER" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Hyperlink fx:id="HaveAnAccount" alignment="CENTER" contentDisplay="CENTER" layoutX="152.0" layoutY="423.0" onAction="#SwitchToForgotLoginPage" prefHeight="24.0" prefWidth="174.0" styleClass="forgotpassword" stylesheets="@Style.css" text="حساب کاربری دارید؟" textAlignment="CENTER" textFill="WHITE" />
+                        <TextField fx:id="UsernameTextField" alignment="CENTER_RIGHT" layoutX="246.0" layoutY="121.0" prefHeight="39.0" prefWidth="162.0" promptText="نام کاربری" />
+                        <PasswordField fx:id="PasswordTextField" alignment="CENTER_RIGHT" layoutX="73.0" layoutY="121.0" prefHeight="39.0" prefWidth="162.0" promptText="رمز عبور" />
+                        <TextField fx:id="NameTextField" alignment="CENTER_RIGHT" layoutX="246.0" layoutY="166.0" prefHeight="39.0" prefWidth="162.0" promptText="نام" />
+                        <TextField fx:id="FamilyTextField" alignment="CENTER_RIGHT" layoutX="74.0" layoutY="166.0" prefHeight="39.0" prefWidth="162.0" promptText="نام خانوادگی" />
+                        <TextField fx:id="PhoneNumberTextField" alignment="CENTER_RIGHT" layoutX="246.0" layoutY="212.0" prefHeight="39.0" prefWidth="162.0" promptText="تلفن همراه" />
+                        <TextField fx:id="EmailTextField" alignment="CENTER" layoutX="74.0" layoutY="258.0" prefHeight="39.0" prefWidth="334.0" promptText="ایمیل" />
+                        <ComboBox fx:id="ChooseRoleComboBox" layoutX="74.0" layoutY="212.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="39.0" prefWidth="162.0" promptText="نقش خود را انتخاب کنید" styleClass="forgotpassword" stylesheets="@Style.css" visibleRowCount="3" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="ForgotPasswordPane" layoutX="263.0" layoutY="59.0" prefHeight="475.0" prefWidth="475.0" styleClass="contentPane" stylesheets="@Style.css" visible="false">
+                     <children>
+                        <Label fx:id="RetrivalPasswordText" alignment="CENTER_RIGHT" ellipsisString="1" layoutX="200.0" layoutY="150.0" prefHeight="39.0" prefWidth="200.0" styleClass="LoginText" stylesheets="@Style.css" text=" بازیابی رمز عبور" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
+                           <font>
+                              <Font name="Arial Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="230.0" fitWidth="219.0" layoutX="127.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/freshlyText.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="ConfirmEmailButton" alignment="CENTER" cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" layoutX="73.0" layoutY="306.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="329.0" scaleShape="false" styleClass="loginButton" stylesheets="@Style.css" text="تایید" textAlignment="CENTER" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <TextField fx:id="VerificationٍEmailTextField" alignment="CENTER" layoutX="74.0" layoutY="252.0" prefHeight="39.0" prefWidth="329.0" promptText="ایمیل" />
+                        <Label fx:id="EnterEmailText" alignment="CENTER" layoutX="73.0" layoutY="201.0" prefHeight="39.0" prefWidth="329.0" styleClass="EmailText" stylesheets="@Style.css" text="ایمیل خود را وارد کنید">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                        </Label>
+                        <Hyperlink fx:id="BackToLoginPage" alignment="CENTER" layoutX="171.0" layoutY="359.0" onAction="#SwitchToLoginPageFromForgotPasswordPage" styleClass="forgotpassword" stylesheets="@Style.css" text="بازگشت به صفحه ورود" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="ConfirmCodePane" layoutX="263.0" layoutY="59.0" prefHeight="475.0" prefWidth="475.0" styleClass="contentPane" stylesheets="@Style.css" visible="false">
+                     <children>
+                        <Label fx:id="RetrivalPasswordText1" alignment="CENTER_RIGHT" ellipsisString="1" layoutX="200.0" layoutY="150.0" prefHeight="39.0" prefWidth="200.0" styleClass="LoginText" stylesheets="@Style.css" text=" بازیابی رمز عبور" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
+                           <font>
+                              <Font name="Arial Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="230.0" fitWidth="219.0" layoutX="127.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/freshlyText.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="ConfirmCodeButton" alignment="CENTER" cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" layoutX="73.0" layoutY="306.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="329.0" scaleShape="false" styleClass="loginButton" stylesheets="@Style.css" text="تایید" textAlignment="CENTER" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <TextField fx:id="VerificationٍEmailTextField1" alignment="CENTER" layoutX="74.0" layoutY="252.0" prefHeight="39.0" prefWidth="329.0" promptText="رمز عبور" />
+                        <Label fx:id="EnterEmailText1" alignment="CENTER" layoutX="73.0" layoutY="201.0" prefHeight="39.0" prefWidth="329.0" styleClass="EmailText" stylesheets="@Style.css" text="رمز عبور حساب کاربری شما ارسال شد">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                        </Label>
+                        <Hyperlink fx:id="BackToLoginPage1" alignment="CENTER" layoutX="77.0" layoutY="358.0" onAction="#SwitchToLoginPageFromForgotPasswordPage" prefHeight="30.0" prefWidth="162.0" style="-fx-border-width: 0px 2px 0px 0px; -fx-border-color: #4a154b;" styleClass="forgotpassword" stylesheets="@Style.css" text="بازگشت به صفحه ورود" />
+                        <Hyperlink fx:id="SendAgain" alignment="CENTER" layoutX="240.0" layoutY="358.0" prefHeight="30.0" prefWidth="162.0" styleClass="forgotpassword" stylesheets="@Style.css" text="ارسال دوباره" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
