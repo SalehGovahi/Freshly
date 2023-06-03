@@ -1,9 +1,17 @@
 package com.example.freshly;
 
+<<<<<<< Updated upstream
+=======
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
+import java.util.ArrayList;
+>>>>>>> Stashed changes
 import java.util.LinkedList;
 import java.util.Random;
 
 public class Customer extends Person{
+<<<<<<< Updated upstream
     private LinkedList<Integer> cart=new LinkedList<Integer>();
     private int wallet;
     private LinkedList<String> discountCode;
@@ -12,6 +20,16 @@ public class Customer extends Person{
         return cart;
     }
     public void setCart(LinkedList<Integer> cart) {
+=======
+    private ObservableList<Integer> cart= FXCollections.observableArrayList();
+    private int wallet;
+    private LinkedList<String> discountCode;
+
+    public ObservableList<Integer> getCart() {
+        return cart;
+    }
+    public void setCart(ObservableList<Integer> cart) {
+>>>>>>> Stashed changes
         this.cart = cart;
     }
 
@@ -58,7 +76,11 @@ public class Customer extends Person{
             System.out.println(a);
         }
     }
+<<<<<<< Updated upstream
     public Customer(String username, String password, String firstname, String lastname, String phoneNumber, String emailAddress, LinkedList<Integer> cart, int wallet,LinkedList<String>discountCode) {
+=======
+    public Customer(String username, String password, String firstname, String lastname, String phoneNumber, String emailAddress, ObservableList<Integer> cart, int wallet,LinkedList<String>discountCode) {
+>>>>>>> Stashed changes
         super(username, password, firstname, lastname, phoneNumber, emailAddress, "customer");
         this.cart = cart;
         this.wallet = wallet;

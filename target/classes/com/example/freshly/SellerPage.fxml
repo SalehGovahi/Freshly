@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<Pane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freshly.SellerPage">
+<Pane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freshly.SellerPage">
    <children>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -82,19 +73,19 @@
                                                 <Font size="18.0" />
                                              </font>
                                           </Label>
-                                          <TextField alignment="CENTER" layoutX="606.0" layoutY="101.0" prefHeight="30.0" prefWidth="170.0" />
+                                          <TextField fx:id="BrandTextfield" alignment="CENTER" layoutX="606.0" layoutY="101.0" prefHeight="30.0" prefWidth="170.0" />
                                           <Label layoutX="787.0" layoutY="98.0" styleClass="addPaneText" text="برند کالا :">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
                                           </Label>
-                                          <TextField alignment="CENTER" layoutX="606.0" layoutY="56.0" prefHeight="30.0" prefWidth="170.0" />
+                                          <TextField fx:id="NameTextfield" alignment="CENTER" layoutX="606.0" layoutY="56.0" prefHeight="30.0" prefWidth="170.0" />
                                           <Label layoutX="471.0" layoutY="54.0" styleClass="addPaneText" text="نوع کالا :">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
                                           </Label>
-                                          <TextField alignment="CENTER" layoutX="606.0" layoutY="147.0" prefHeight="30.0" prefWidth="170.0" />
+                                          <TextField fx:id="PriceTextfield" alignment="CENTER" layoutX="606.0" layoutY="147.0" prefHeight="30.0" prefWidth="170.0" />
                                           <Label layoutX="470.0" layoutY="97.0" styleClass="addPaneText" text="موجودی :">
                                              <font>
                                                 <Font size="18.0" />
@@ -105,8 +96,8 @@
                                                 <Font size="18.0" />
                                              </font>
                                           </Label>
-                                          <TextField alignment="CENTER" layoutX="290.0" layoutY="101.0" prefHeight="30.0" prefWidth="170.0" />
-                                          <Button fx:id="AddButton" layoutX="526.0" layoutY="234.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="102.0" styleClass="addPaneButton2" text="اضافه">
+                                          <TextField fx:id="StockTextfield" alignment="CENTER" layoutX="290.0" layoutY="101.0" prefHeight="30.0" prefWidth="170.0" />
+                                          <Button fx:id="AddButton" layoutX="526.0" layoutY="234.0" mnemonicParsing="false" onAction="#addBtn" prefHeight="46.0" prefWidth="102.0" styleClass="addPaneButton2" text="اضافه">
                                              <font>
                                                 <Font size="16.0" />
                                              </font>
@@ -122,7 +113,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Button>
-                                          <Button layoutX="410.0" layoutY="234.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="102.0" styleClass="addPaneButton" text="حذف">
+                                          <Button layoutX="410.0" layoutY="234.0" mnemonicParsing="false" onAction="#deleteButton" prefHeight="46.0" prefWidth="102.0" styleClass="addPaneButton" text="حذف">
                                              <font>
                                                 <Font size="16.0" />
                                              </font>
