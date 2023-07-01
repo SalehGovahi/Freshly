@@ -1,0 +1,11 @@
+
+
+.codePane{
+    -fx-border-radius: 5px;
+    -fx-border-width: 2px;
+    -fx-border-color:  #e0e0e6;
+}
+
+.buttonPane{
+    -fx-background-radius: 5px 0px 0px 5px;
+}

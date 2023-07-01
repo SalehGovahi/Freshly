@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<Pane fx:id="Koll1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freshly.ProductPage">
+   <children>
+      <Pane layoutX="-2.0" layoutY="50.0" prefHeight="67.0" prefWidth="1200.0" styleClass="header" stylesheets="@MainPage.css">
+         <children>
+            <ImageView fx:id="FreshlyHeader" fitHeight="60.0" fitWidth="158.0" layoutX="1040.0" layoutY="3.0" onMouseClicked="#returnClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/logoHeader.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <TextField fx:id="SearchTextField" alignment="CENTER" depthTest="DISABLE" layoutX="728.0" layoutY="18.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#searching" onMouseClicked="#FixSearchTextField" pickOnBounds="false" prefHeight="30.0" prefWidth="292.0" promptText="جستجو" styleClass="searchBar" stylesheets="@MainPage.css">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Line endX="40.0" layoutX="1014.0" layoutY="33.0" opacity="0.3" rotate="90.0" />
+            <Pane fx:id="unLoginedPane" layoutX="83.0" layoutY="12.0" onMousePressed="#openLoginPage" prefHeight="41.0" prefWidth="131.0" styleClass="loginButton" stylesheets="@MainPage.css">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="51.0" layoutX="93.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" rotate="-180.0">
+                     <image>
+                        <Image url="@Assets/HeaderIcons/login.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="-25.0" layoutY="-2.0" prefHeight="41.0" prefWidth="150.0" styleClass="loginText" stylesheets="@MainPage.css" text="ورود | ثبت نام">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </Pane>
+            <Line endX="25.0" layoutX="58.0" layoutY="33.0" opacity="0.3" rotate="90.0" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="26.0" layoutY="16.0" onMouseClicked="#openCart" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/HeaderIcons/cart.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="24.0" layoutX="990.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/HeaderIcons/search.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="loginedPane" layoutX="78.0" layoutY="8.0" prefHeight="50.0" prefWidth="50.0" visible="false">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane prefHeight="50.0" prefWidth="1200.0">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/Advertisment.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ScrollPane fx:id="scroll" layoutX="-2.0" layoutY="117.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="583.0" prefWidth="1203.0" styleClass="backwardPane" stylesheets="@MainPage.css">
+         <content>
+            <AnchorPane fx:id="scrollPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="1337.0" prefWidth="1199.0" styleClass="backwardPane" stylesheets="@MainPage.css">
+               <children>
+                  <Pane layoutY="1109.0" prefHeight="223.0" prefWidth="1188.0" styleClass="footer" stylesheets="@MainPage.css">
+                     <children>
+                        <Label cacheShape="false" centerShape="false" contentDisplay="CENTER" depthTest="DISABLE" focusTraversable="false" graphicTextGap="0.0" layoutX="559.0" layoutY="19.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="false" prefHeight="36.0" prefWidth="139.0" scaleShape="false" styleClass="fastAccess" text="دسترسی سریع" textAlignment="JUSTIFY">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </Label>
+                        <Button layoutX="627.0" layoutY="111.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="66.0" styleClass="typeButtonFooter" stylesheets="@MainPage.css" text="نوشیدنی">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="644.0" layoutY="165.0" mnemonicParsing="false" styleClass="typeButtonFooter" stylesheets="@MainPage.css" text="لبنیات">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button graphicTextGap="0.0" layoutX="641.0" layoutY="138.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="52.0" styleClass="typeButtonFooter" stylesheets="@MainPage.css" text="تنقلات">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="602.0" layoutY="85.0" mnemonicParsing="false" styleClass="typeButtonFooter" stylesheets="@MainPage.css" text="مواد پروتئینی">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="537.0" layoutY="58.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="155.0" styleClass="typeButtonFooter" stylesheets="@MainPage.css" text="کالاهای اساسی و خواروبار">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ImageView fitHeight="155.0" fitWidth="191.0" layoutX="1022.0" layoutY="-41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/logoFooter.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="182.0" fitWidth="360.0" layoutX="813.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/DescriptionTextFooter.png" />
+                           </image>
+                        </ImageView>
+                        <Circle fill="DODGERBLUE" layoutX="693.0" layoutY="75.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke-width: 0px;" />
+                        <Circle fill="DODGERBLUE" layoutX="693.0" layoutY="103.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke-width: 0px;" />
+                        <Circle fill="DODGERBLUE" layoutX="693.0" layoutY="129.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke-width: 0px;" />
+                        <Circle fill="DODGERBLUE" layoutX="693.0" layoutY="155.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke-width: 0px;" />
+                        <Circle fill="DODGERBLUE" layoutX="693.0" layoutY="182.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke-width: 0px;" />
+                        <Label layoutX="341.0" layoutY="19.0" styleClass="fastAccess" text="ارتباط با ما">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Circle fill="DODGERBLUE" layoutX="424.0" layoutY="75.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke-width: 0px;" />
+                        <Button layoutX="347.0" layoutY="86.0" mnemonicParsing="false" styleClass="typeButtonFooter" text="تماس با ما" />
+                        <Circle fill="DODGERBLUE" layoutX="424.0" layoutY="103.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke-width: 0px;" />
+                        <Button layoutX="362.0" layoutY="111.0" mnemonicParsing="false" styleClass="typeButtonFooter" text="درباره ما" />
+                        <Button layoutX="320.0" layoutY="59.0" mnemonicParsing="false" styleClass="typeButtonFooter" text="قوانین و مقررات" />
+                        <Circle fill="DODGERBLUE" layoutX="424.0" layoutY="129.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke-width: 0px;" />
+                        <ImageView fitHeight="127.0" fitWidth="99.0" layoutX="31.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/etemadLogoFooter.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="127.0" fitWidth="99.0" layoutX="143.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/neshanLogoFooter.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="30.0" layoutY="35.0" prefHeight="1050.0" prefWidth="1131.0" styleClass="mainPane" stylesheets="@ProductPage.css">
+                     <children>
+                        <ImageView fx:id="ProductImage" fitHeight="386.0" fitWidth="386.0" layoutX="733.0" layoutY="33.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@Assets/temp2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="BrandProduct" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="602.0" layoutY="46.0" prefHeight="31.0" prefWidth="113.0" styleClass="brandtexts" stylesheets="@ProductPage.css" text="مهیا پروتئین" />
+                        <Label fx:id="BrandName" alignment="CENTER_RIGHT" layoutX="377.0" layoutY="64.0" prefHeight="75.0" prefWidth="339.0" styleClass="title" stylesheets="@ProductPage.css" text="کالباس درجه یک ژامبون مرغ" />
+                        <Pane layoutX="25.0" layoutY="215.0" prefHeight="306.0" prefWidth="266.0" styleClass="sellerPane" stylesheets="@ProductPage.css">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" layoutX="171.0" layoutY="12.0" prefHeight="41.0" prefWidth="80.0" styleClass="sellerPaneTitle" stylesheets="@ProductPage.css" text="فروشنده" />
+                              <Label fx:id="productSeller" layoutX="117.0" layoutY="70.0" styleClass="sellerPaneSeller" stylesheets="@ProductPage.css" text="شرکت فلان" />
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="203.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Assets/StoreIcon.png" />
+                                 </image>
+                              </ImageView>
+                              <Line endX="266.0" layoutY="112.0" style="-fx-stroke: E0E0E6FF;" />
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="205.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Assets/guaranteedIcon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="13.0" layoutY="134.0" styleClass="detailsKey" text="گارانتی اصالت و سلامت فیزیکی کالا">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="266.0" layoutY="174.0" style="-fx-stroke: E0E0E6FF;" />
+                              <Label layoutX="148.0" layoutY="223.0" styleClass="detailsKey" text="قیمت مصرف کننده :" />
+                              <Label fx:id="ProductPrice" layoutX="34.0" layoutY="220.0" styleClass="sellerPanePrice" text="73,000" />
+                              <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="7.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Assets/Toman.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="addToCart" layoutX="15.0" layoutY="254.0" mnemonicParsing="false" onAction="#AddingToCostumerCart" prefHeight="41.0" prefWidth="235.0" styleClass="sellerPaneButton" text="افزودن به سبد خرید">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                           </children></Pane>
+                        <Pane layoutX="25.0" layoutY="133.0" prefHeight="75.0" prefWidth="267.0" styleClass="buyingOptions">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="179.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Assets/Delivery.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="32.0" layoutY="25.0" styleClass="detailsValue" text="ارسال سریع با پیک پیشتاز" />
+                           </children></Pane>
+                        <Line endX="315.0" endY="1.0000152587890625" layoutX="401.0" layoutY="132.0" startX="-100.0" style="-fx-stroke: #e0e0e6;" />
+                        <Circle fill="DODGERBLUE" layoutX="710.0" layoutY="268.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: black; -fx-stroke-width: 0px;" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="691.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/Star.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="ProductRate" layoutX="672.0" layoutY="147.0" text="4.1">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="commentsCount" layoutX="599.0" layoutY="148.0" onMouseClicked="#scrollToComment" text="5 دیدگاه" textFill="#006fff">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Label>
+                        <Circle fill="#f2ecec" layoutX="658.0" layoutY="158.0" radius="5.0" stroke="#f2ecec" strokeType="INSIDE" />
+                        <Label alignment="CENTER_RIGHT" layoutX="602.0" layoutY="167.0" prefHeight="61.0" prefWidth="114.0" styleClass="detailsTitle" text="ویژگی ها" />
+                        <Label alignment="CENTER_RIGHT" layoutX="653.0" layoutY="248.0" opacity="0.7" prefHeight="36.0" prefWidth="45.0" styleClass="detailsKey" text="برند :" />
+                        <Label fx:id="BrandProductUnder" layoutX="595.0" layoutY="254.0" styleClass="detailsValue" text="مهیا پروتئین" />
+                        <Circle fill="DODGERBLUE" layoutX="711.0" layoutY="304.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: black; -fx-stroke-width: 0px;" />
+                        <Label alignment="CENTER_RIGHT" layoutX="601.0" layoutY="284.0" opacity="0.7" prefHeight="36.0" prefWidth="98.0" styleClass="detailsKey" text="تاریخ انقضاء :" />
+                        <Label layoutX="548.0" layoutY="293.0" styleClass="detailsValue" text="1402/09/12" />
+                        <Line endX="746.2666015625" layoutX="354.0" layoutY="600.0" startX="-327.8666687011719" style="-fx-stroke: #e0e0e6;" />
+                        <Label layoutX="965.0" layoutY="559.0" text="دیدگاه ها" textFill="#4a154b">
+                           <font>
+                              <Font name="Vazir Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="952.0" layoutY="592.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Old%20Games/Freshly/src/main/resources/com/example/freshly/Assets/lineCart.png" />
+                           </image>
+                        </ImageView>
+                        <ScrollPane hbarPolicy="NEVER" layoutX="65.0" layoutY="616.0" prefHeight="345.0" prefWidth="1000.0">
+                           <content>
+                              <VBox fx:id="CommentVBox" prefHeight="345.0" prefWidth="1000.0">
+                                 <children>
+                                    <HBox fx:id="CommentHBox" prefHeight="362.0" prefWidth="1000.0">
+                                       <children>
+                                          <TextFlow fx:id="CommentTextFlow" prefHeight="346.0" prefWidth="510.0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                        <Label layoutX="948.0" layoutY="982.0" text="ارسال دیدگاه :">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="308.0" layoutY="341.0" prefHeight="79.0" prefWidth="408.0" styleClass="buyingOptions" stylesheets="@ProductPage.css">
+                           <children>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="375.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Assets/costumersClub.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="70.0" layoutY="13.0" styleClass="buyingOptionsTexts" stylesheets="@ProductPage.css" text="با عضویت در باشگاه مشتریان از ارسال رایگان کالاها بهره مند شوید" />
+                              <Label layoutX="51.0" layoutY="45.0" styleClass="buyingOptionsTexts" stylesheets="@ProductPage.css" text="تخفیف های بیشتر با خرید های بیشتر برای کاربران عضو در باشگاه مشتریان" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="308.0" layoutY="440.0" prefHeight="79.0" prefWidth="408.0" styleClass="buyingOptions" stylesheets="@ProductPage.css">
+                           <children>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="374.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Assets/disacountIcon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="241.0" layoutY="13.0" styleClass="buyingOptionsTexts" stylesheets="@ProductPage.css" text="تخفیف ویژه برای اولین خرید" />
+                              <Label layoutX="3.0" layoutY="45.0" styleClass="buyingOptionsTexts" stylesheets="@ProductPage.css" text="برای اولین خرید از فروشگاه 50 هزارتومان تخفیف به ازای خرید های بالای 200 هزار تومان" />
+                           </children></Pane>
+                        <Circle fill="DODGERBLUE" layoutX="710.0" layoutY="236.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: black; -fx-stroke-width: 0px;" />
+                        <Label alignment="CENTER_RIGHT" layoutX="617.0" layoutY="216.0" opacity="0.7" prefHeight="36.0" prefWidth="81.0" styleClass="detailsKey" text="دسته بندی :" />
+                        <Label fx:id="TypeProduct" layoutX="549.0" layoutY="222.0" styleClass="detailsValue" stylesheets="@ProductPage.css" text="مواد پروتئینی" />
+                        <ImageView fitHeight="80.0" fitWidth="400.0" layoutX="722.0" layoutY="466.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/Screenshot%202023-06-06%20190917.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="CommentTextField" alignment="CENTER_RIGHT" layoutX="64.0" layoutY="978.0" prefHeight="38.0" prefWidth="869.0" />
+                        <Button fx:id="SendComment" layoutX="67.0" layoutY="982.0" mnemonicParsing="false" onAction="#sendComment" prefHeight="30.0" prefWidth="90.0" text="ارسال" />
+                        <Pane layoutX="751.0" layoutY="439.0" prefHeight="79.0" prefWidth="329.0" styleClass="buyingOptions" stylesheets="@ProductPage.css">
+                           <children>
+                              <ImageView fx:id="Star1" fitHeight="31.0" fitWidth="29.0" layoutX="78.0" layoutY="25.0" onMouseClicked="#point1" onMouseEntered="#Star1Hover" onMouseExited="#Star1AfterHover" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Assets/EmptyStar.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="Star2" fitHeight="31.0" fitWidth="29.0" layoutX="115.0" layoutY="25.0" onMouseClicked="#point2" onMouseEntered="#Star2Hover" onMouseExited="#Star2AfterHover" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Assets/EmptyStar.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="Star3" fitHeight="31.0" fitWidth="29.0" layoutX="152.0" layoutY="25.0" onMouseClicked="#point3" onMouseEntered="#Star3Hover" onMouseExited="#Star3AfterHover" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Assets/EmptyStar.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="Star4" fitHeight="31.0" fitWidth="29.0" layoutX="189.0" layoutY="25.0" onMouseClicked="#point4" onMouseEntered="#Star4Hover" onMouseExited="#Star4AfterHover" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Assets/EmptyStar.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="Star5" fitHeight="31.0" fitWidth="29.0" layoutX="226.0" layoutY="25.0" onMouseClicked="#point5" onMouseEntered="#Star5Hover" onMouseExited="#Star5AfterHover" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Assets/EmptyStar.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</Pane>

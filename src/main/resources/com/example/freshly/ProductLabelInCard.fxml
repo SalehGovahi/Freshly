@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="690.0" style="-fx-background-color: fffff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freshly.ProductLabelInCard">
+   <children>
+      <ImageView fx:id="ImageProduct" fitHeight="130.0" fitWidth="130.0" layoutX="548.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/temp2.jpg" />
+         </image></ImageView>
+      <Label fx:id="ProductLabel" layoutX="378.0" layoutY="13.0" styleClass="title" stylesheets="@ProductLabelInCard.css" text="کالباس درجه یک ژامبون مرغ" />
+      <ImageView fitHeight="32.0" fitWidth="25.0" layoutX="517.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/guaranteedIcon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="340.0" layoutY="49.0" styleClass="details" stylesheets="@ProductLabelInCard.css" text="گارانتی اصالت و سلامت فیزیکی کالا" />
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="519.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/Delivery.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="387.0" layoutY="74.0" styleClass="details" stylesheets="@ProductLabelInCard.css" text="ارسال سریع با پیک موتوری" />
+      <Label fx:id="PriceLabel" layoutX="494.0" layoutY="108.0" styleClass="title" stylesheets="@ProductLabelInCard.css" text="75,000" />
+      <ImageView fitHeight="30.0" fitWidth="22.0" layoutX="462.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/SecondPaymentToman.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="PaneAfterClickingBuyingButton" layoutX="18.0" layoutY="20.0" prefHeight="50.0" prefWidth="252.0" />
+      <Pane layoutX="15.0" layoutY="99.0" prefHeight="33.0" prefWidth="75.0" styleClass="addSelling" stylesheets="@ProductPage.css">
+         <children>
+            <ImageView fx:id="minusProduct" fitHeight="18.0" fitWidth="16.0" layoutY="10.0" onMouseClicked="#minusProduct" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/minusIcon.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="plusProduct" fitHeight="18.0" fitWidth="16.0" layoutX="58.0" layoutY="10.0" onMouseClicked="#plusProduct" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/plusIcon.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="CountOfProduct" layoutX="32.0" text="1">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>

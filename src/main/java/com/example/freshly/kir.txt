@@ -1,0 +1,21 @@
+public void returnClicked(MouseEvent event){
+        Return();
+    }
+
+    @Override
+    public void Return() {
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(root);
+
+            stage.setTitle("Main Page");
+            loginedPane.getScene().getWindow().hide();
+
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }

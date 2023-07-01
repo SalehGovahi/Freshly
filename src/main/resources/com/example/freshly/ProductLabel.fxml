@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="270.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freshly.ProductLabel">
+<Pane fx:id="productPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openProductInformation" prefHeight="350.0" prefWidth="270.0" style="-fx-background-color: white;" styleClass="mainPane" stylesheets="@ProductLabel.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freshly.ProductLabel">
    <children>
       <ImageView fx:id="ProductsImage" fitHeight="223.0" fitWidth="246.0" layoutX="12.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -41,15 +42,21 @@
             <Image url="@Assets/Delivery.png" />
          </image>
       </ImageView>
-      <Label layoutX="184.0" layoutY="276.0" styleClass="Delivery" stylesheets="@ProductLabel.css" text="ارسال سریع">
+      <Label layoutX="168.0" layoutY="276.0" styleClass="Delivery" stylesheets="@ProductLabel.css" text="ارسال سریع">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <ImageView fx:id="AddToCartButton" fitHeight="30.0" fitWidth="30.0" layoutX="231.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="AddToCartButton" fitHeight="30.0" fitWidth="30.0" layoutX="233.0" layoutY="309.0" onMousePressed="#addToCart" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../Assets/AddIcon.png" />
+            <Image url="@Assets/AddIcon.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </ImageView>
    </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
 </Pane>

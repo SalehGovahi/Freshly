@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" styleClass="backwardPane" stylesheets="@SellerPage.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freshly.AdminPage">
+    <children>
+        <Pane layoutX="953.0" prefHeight="700.0" prefWidth="247.0" styleClass="navbarPane" stylesheets="@SellerPage.css">
+            <children>
+                <Button fx:id="FinancialButton" layoutX="36.0" layoutY="168.0" mnemonicParsing="false" onMouseClicked="#switchtoFinancial" prefHeight="59.0" prefWidth="179.0" styleClass="navbarButton" stylesheets="@SellerPage.css" text="مدیریت مالی">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button layoutX="36.0" layoutY="322.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="179.0" styleClass="navbarButton" text="مدیریت تبلیغات ">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="ConfirmSellerButton" layoutX="36.0" layoutY="398.0" mnemonicParsing="false" onMouseClicked="#switchtoComfirmSeller" prefHeight="59.0" prefWidth="179.0" styleClass="navbarButton" stylesheets="@SellerPage.css" text="تایید فروشندگان">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="169.0" layoutY="636.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Assets/HeaderIcons/logoutButton.png" />
+                    </image>
+                </ImageView>
+                <Button alignment="TOP_CENTER" layoutX="46.0" layoutY="636.0" minWidth="53.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="126.0" styleClass="logoutButton" text="خروج از حساب کاربری">
+                    <font>
+                        <Font size="1.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Label alignment="CENTER" layoutX="23.0" layoutY="75.0" prefHeight="44.0" prefWidth="202.0" styleClass="navbarText" stylesheets="@SellerPage.css" text="پنل ادمین" textAlignment="CENTER">
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="198.0" fitWidth="198.0" layoutX="26.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Assets/logoSellerPage.png" />
+                    </image>
+                </ImageView>
+            <Button layoutX="36.0" layoutY="476.0" mnemonicParsing="false" onAction="#switchtoMassages" onMouseClicked="#switchtoMassages" prefHeight="59.0" prefWidth="179.0" styleClass="navbarButton" stylesheets="@SellerPage.css" text="پیام های فروشندگان">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="StoreRoomButton" layoutX="36.0" layoutY="245.0" mnemonicParsing="false" onMouseClicked="#switchtoStoreRoom" prefHeight="59.0" prefWidth="179.0" styleClass="navbarButton" text="انبار داری">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            </children>
+        </Pane>
+      <Pane fx:id="FinancialPane" prefHeight="700.0" prefWidth="953.0" visible="false">
+         <children>
+                <Separator layoutX="36.0" layoutY="291.0" prefHeight="1.0" prefWidth="891.0" style="-fx-background-color: black;" />
+                <Pane layoutX="36.0" layoutY="36.0" prefHeight="232.0" prefWidth="891.0" stylesheets="@AdminPage.css">
+               <children>
+                  <TableView prefHeight="233.0" prefWidth="891.0">
+                    <columns>
+                      <TableColumn prefWidth="890.2000160217285" text="شماره حساب های فروشگاه" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+                <Pane layoutX="36.0" layoutY="313.0" prefHeight="362.0" prefWidth="891.0" styleClass="addPane" stylesheets="@SellerPage.css">
+               <children>
+                  <BarChart layoutX="1.0" layoutY="8.0" prefHeight="351.0" prefWidth="697.0" title="نمودار درآمدها">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+                  <Button layoutX="710.0" layoutY="96.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="163.0" styleClass="chartButton" stylesheets="@AdminPage.css" text="ماهانه">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="710.0" layoutY="165.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="163.0" styleClass="chartButton" stylesheets="@AdminPage.css" text="سالانه">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+                </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="StoreRoom" prefHeight="700.0" prefWidth="953.0" visible="false">
+         <children>
+            <Pane layoutX="38.0" layoutY="37.0" prefHeight="647.0" prefWidth="891.0" styleClass="addPane" stylesheets="@SellerPage.css">
+               <children>
+                  <Pane prefHeight="89.0" prefWidth="891.0" styleClass="navbarPane">
+                     <children>
+                        <Button layoutX="247.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchtoDefineStoreRoom" prefHeight="59.0" prefWidth="122.0" styleClass="navbarButton" text="تعریف انبار">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button layoutX="385.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchtoReportStoreRoom" prefHeight="59.0" prefWidth="122.0" styleClass="navbarButton" text="ورود و خروج انبار">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button layoutX="524.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchtoInventoryStoreRoom" prefHeight="59.0" prefWidth="122.0" styleClass="navbarButton" text="دارایی انبار">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                     </children>
+                  </Pane>
+                  <TableView layoutX="14.0" layoutY="102.0" prefHeight="272.0" prefWidth="861.0" stylesheets="@AdminPage.css">
+                    <columns>
+                      <TableColumn prefWidth="154.13333892822266" resizable="false" text="نام انبار" />
+                      <TableColumn prefWidth="341.0666961669922" resizable="false" text="آدرس" />
+                        <TableColumn prefWidth="132.26666259765625" resizable="false" text="کالای انبار" />
+                        <TableColumn prefWidth="232.53338623046875" resizable="false" text="مدیر انبار" />
+                    </columns>
+                  </TableView>
+                  <Pane fx:id="DefineStoreRoom" layoutX="13.0" layoutY="393.0" prefHeight="248.0" prefWidth="863.0" visible="false">
+                     <children>
+                        <Button layoutX="205.0" layoutY="23.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="122.0" styleClass="chartButton" stylesheets="@AdminPage.css" text="بروزرسانی">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="205.0" layoutY="87.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="122.0" styleClass="chartButton" stylesheets="@AdminPage.css" text="اضافه">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="205.0" layoutY="152.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="122.0" styleClass="chartButton" stylesheets="@AdminPage.css" text="حذف">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label layoutX="625.0" layoutY="20.0" styleClass="addTexts" stylesheets="@AdminPage.css" text="نام انبار :" />
+                        <Label layoutX="626.0" layoutY="69.0" styleClass="addTexts" stylesheets="@AdminPage.css" text="کالای انبار :" />
+                        <Label layoutX="626.0" layoutY="121.0" styleClass="addTexts" stylesheets="@AdminPage.css" text="مدیر انبار :" />
+                        <TextField alignment="CENTER" layoutX="346.0" layoutY="23.0" prefHeight="30.0" prefWidth="270.0" />
+                        <TextField alignment="CENTER" layoutX="346.0" layoutY="74.0" prefHeight="30.0" prefWidth="270.0" />
+                        <TextField alignment="CENTER" layoutX="346.0" layoutY="126.0" prefHeight="30.0" prefWidth="270.0" />
+                        <Label layoutX="626.0" layoutY="170.0" styleClass="addTexts" stylesheets="@AdminPage.css" text="آدرس انبار :" />
+                        <TextField alignment="CENTER" layoutX="346.0" layoutY="175.0" prefHeight="30.0" prefWidth="270.0" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="ReportStoreRoom" focusTraversable="true" layoutX="16.0" layoutY="388.0" prefHeight="248.0" prefWidth="861.0" visible="false">
+                     <children>
+                        <Button layoutX="284.0" layoutY="84.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="300.0" styleClass="downloadCsv" stylesheets="@AdminPage.css" text="دانلود گزارش به صورت CSV">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="inventoryStoreRoom" layoutX="14.0" layoutY="385.0" prefHeight="248.0" prefWidth="861.0" visible="false">
+                     <children>
+                        <PieChart layoutX="133.0" layoutY="1.0" prefHeight="244.0" prefWidth="307.0" />
+                        <Button layoutX="506.0" layoutY="36.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="113.0" styleClass="downloadCsv" stylesheets="@AdminPage.css" text="روزانه">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="505.0" layoutY="103.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="113.0" styleClass="downloadCsv" stylesheets="@AdminPage.css" text="ماهانه">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="506.0" layoutY="171.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="113.0" styleClass="downloadCsv" stylesheets="@AdminPage.css" text="سالانه">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="ConfirmSeller" prefHeight="700.0" prefWidth="953.0">
+         <children>
+            <Pane layoutX="48.0" layoutY="48.0" prefHeight="600.0" prefWidth="850.0" styleClass="addPane">
+               <children>
+                  <ScrollPane layoutX="82.0" layoutY="65.0" prefHeight="460.0" prefWidth="693.0" style="-fx-background-color: #ffff;" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="SendMassagePane" prefHeight="700.0" prefWidth="953.0" visible="false">
+         <children>
+            <Pane layoutX="48.0" layoutY="48.0" prefHeight="600.0" prefWidth="850.0" styleClass="addPane">
+               <children>
+                  <Pane layoutX="27.0" layoutY="31.0" prefHeight="542.0" prefWidth="668.0" styleClass="sendMassage" stylesheets="@AdminPage.css">
+                     <children>
+                        <ScrollPane layoutX="1.0" prefHeight="472.0" prefWidth="668.0" style="-fx-background-color: #363636;">
+                           <content>
+                              <Pane prefHeight="470.0" prefWidth="666.0" styleClass="scrollPaneFit" stylesheets="@AdminPage.css" />
+                           </content>
+                        </ScrollPane>
+                        <TextField layoutX="15.0" layoutY="483.0" prefHeight="44.0" prefWidth="501.0" />
+                        <Button fx:id="SendMassageButton" layoutX="531.0" layoutY="483.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="120.0" styleClass="sendMassageButton" stylesheets="@AdminPage.css" text="ارسال">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+    </children>
+</Pane>

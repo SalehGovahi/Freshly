@@ -1,0 +1,14 @@
+
+
+.title{
+    -fx-font-family: Vazir;
+    -fx-font-weight: Bold;
+    -fx-font-size: 14px;
+}
+
+.details{
+    -fx-font-family: Vazir;
+    -fx-font-weight: Medium;
+    -fx-font-size: 12px;
+    -fx-text-fill: #767790;
+}

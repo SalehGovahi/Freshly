@@ -1,0 +1,65 @@
+
+
+.mainPane{
+    -fx-background-color: linear-gradient(to left ,#FFFFFF ,#F2E0CD,#C9E8ED);
+}
+
+.paymentpane{
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 5, 0, 0, 0);
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.card{
+    -fx-background-color: #EDF2F3;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 5, 0, 0, 0);
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.titles{
+    -fx-font-family: "IRANYekanWeb Medium";
+    -fx-font-size: 16px;
+}
+
+.sendPass{
+    -fx-background-color: transparent;
+    -fx-text-fill: midnightblue;
+    -fx-font-family: "IRANYekanWeb ExtraBold";
+    -fx-font-size: 10px;
+}
+
+.cardNumber{
+    -fx-font-family: "IRANYekanWeb Medium";
+    -fx-text-fill: #1F3541;
+    -fx-font-size: 25px;
+}
+
+.cvv2{
+    -fx-font-family: "IRANYekanWeb Medium";
+    -fx-text-fill: #1F3541;
+    -fx-font-size: 14px;
+}
+
+.buyingButton{
+    -fx-background-color: #39a43a;
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
+    -fx-font-family: "IRANYekanWeb Medium";
+    -fx-font-size: 14px;
+}
+.buyingButton:hover{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 5, 0, 0, 0);
+}
+
+.cancelButton{
+    -fx-background-color: #ff292b;
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
+    -fx-font-family: "IRANYekanWeb Medium";
+    -fx-font-size: 14px;
+}
+.cancelButton:hover{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 5, 0, 0, 0);
+}

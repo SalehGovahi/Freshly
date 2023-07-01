@@ -1,0 +1,12 @@
+
+
+.title{
+    -fx-font-family: "IRANYekanWeb Medium";
+    -fx-font-weight: Bold;
+    -fx-font-size: 18px;
+}
+
+.details{
+    -fx-font-family: "IRANYekanWeb Medium";
+    -fx-font-size: 15px;
+}

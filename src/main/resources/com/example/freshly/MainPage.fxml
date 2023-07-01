@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freshly.MainPage">
    <children>
       <Pane layoutX="-2.0" layoutY="50.0" prefHeight="67.0" prefWidth="1200.0" styleClass="header" stylesheets="@MainPage.css">
          <children>
@@ -26,13 +20,13 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <TextField alignment="CENTER" depthTest="ENABLE" layoutX="728.0" layoutY="18.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="292.0" promptText="جستجو" styleClass="searchBar" stylesheets="@MainPage.css">
+            <TextField fx:id="SearchTextField" alignment="CENTER" depthTest="ENABLE" layoutX="728.0" layoutY="18.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#searching" prefHeight="30.0" prefWidth="292.0" promptText="جستجو" styleClass="searchBar" stylesheets="@MainPage.css">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
             </TextField>
             <Line endX="40.0" layoutX="1014.0" layoutY="33.0" opacity="0.3" rotate="90.0" />
-            <Pane layoutX="83.0" layoutY="12.0" prefHeight="41.0" prefWidth="131.0" styleClass="loginButton" stylesheets="@MainPage.css">
+            <Pane fx:id="headerMainPageUnlogined" layoutX="83.0" layoutY="12.0" onMouseClicked="#openLoginPage" prefHeight="41.0" prefWidth="131.0" styleClass="loginButton" stylesheets="@MainPage.css">
                <children>
                   <ImageView fitHeight="30.0" fitWidth="51.0" layoutX="93.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" rotate="-180.0">
                      <image>
@@ -50,7 +44,7 @@
                </children>
             </Pane>
             <Line endX="25.0" layoutX="58.0" layoutY="33.0" opacity="0.3" rotate="90.0" />
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="26.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="26.0" layoutY="16.0" onMouseClicked="#openCart" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Assets/HeaderIcons/cart.png" />
                </image>
@@ -70,6 +64,11 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Pane>
+            <Pane fx:id="headerMainPage" layoutX="78.0" layoutY="8.0" prefHeight="50.0" prefWidth="50.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+               </children>
+            </Pane>
          </children>
       </Pane>
       <Pane prefHeight="50.0" prefWidth="1200.0">
@@ -81,33 +80,33 @@
             </ImageView>
          </children>
       </Pane>
-      <ScrollPane layoutX="-2.0" layoutY="117.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="583.0" prefWidth="1203.0" styleClass="backwardPane" stylesheets="@MainPage.css">
+      <ScrollPane fx:id="scrollPane" layoutX="-2.0" layoutY="117.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="583.0" prefWidth="1203.0" styleClass="backwardPane" stylesheets="@MainPage.css">
          <content>
-            <AnchorPane fx:id="scrollPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="1052.0" prefWidth="1199.0" styleClass="backwardPane" stylesheets="@MainPage.css">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="1052.0" prefWidth="1199.0" styleClass="backwardPane" stylesheets="@MainPage.css">
                <children>
                   <Pane layoutX="7.0" prefHeight="449.0" prefWidth="1179.0" styleClass="backwardPane" stylesheets="@MainPage.css">
                      <children>
-                        <Button layoutX="338.0" layoutY="18.0" mnemonicParsing="false" styleClass="typeButton" stylesheets="@MainPage.css" text="نوشیدنی">
+                        <Button fx:id="drinks" layoutX="434.0" layoutY="20.0" mnemonicParsing="false" onAction="#onFilterButtonsClicked" styleClass="typeButton" stylesheets="@MainPage.css" text="نوشیدنی">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button layoutX="440.0" layoutY="18.0" mnemonicParsing="false" styleClass="typeButton" stylesheets="@MainPage.css" text="لبنیات">
+                        <Button fx:id="dairy" layoutX="530.0" layoutY="21.0" mnemonicParsing="false" onAction="#onFilterButtonsClicked" styleClass="typeButton" stylesheets="@MainPage.css" text="لبنیات">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button layoutX="695.0" layoutY="19.0" mnemonicParsing="false" styleClass="typeButton" stylesheets="@MainPage.css" text="تنقلات">
+                        <Button fx:id="nuts" layoutX="764.0" layoutY="20.0" mnemonicParsing="false" onAction="#onFilterButtonsClicked" styleClass="typeButton" stylesheets="@MainPage.css" text="تنقلات">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button layoutX="763.0" layoutY="19.0" mnemonicParsing="false" styleClass="typeButton" stylesheets="@MainPage.css" text="مواد پروتئینی">
+                        <Button fx:id="proteins" layoutX="832.0" layoutY="19.0" mnemonicParsing="false" onAction="#onFilterButtonsClicked" styleClass="typeButton" stylesheets="@MainPage.css" text="مواد پروتئینی">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button layoutX="527.0" layoutY="18.0" mnemonicParsing="false" styleClass="typeButton" stylesheets="@MainPage.css" text="کالاهای اساسی و خواروبار">
+                        <Button fx:id="groceries" layoutX="604.0" layoutY="20.0" mnemonicParsing="false" onAction="#onFilterButtonsClicked" styleClass="typeButton" stylesheets="@MainPage.css" text="کالاهای اساسی و خواروبار">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -119,11 +118,16 @@
                            <children>
                               <ImageView fitHeight="398.0" fitWidth="941.0" layoutX="-8.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@Assets/AuctionBanner%20copy.png" />
+                                    <Image url="@Assets/AuctionBanner copy.png" />
                                  </image>
                               </ImageView>
                            </children>
                         </Pane>
+                        <Button fx:id="allProducts" layoutX="326.0" layoutY="21.0" mnemonicParsing="false" onAction="#onFilterButtonsClicked" styleClass="typeButton" stylesheets="@MainPage.css" text="همه کالاها">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
                      </children>
                   </Pane>
                   <Pane layoutY="821.0" prefHeight="223.0" prefWidth="1188.0" styleClass="footer" stylesheets="@MainPage.css">

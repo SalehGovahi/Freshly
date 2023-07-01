@@ -11,3 +11,10 @@
     -fx-font-family: "B Yekan+";
     -fx-font-weight: bold;
 }
+
+.mainPane{
+    -fx-background-color: white;
+}
+.mainPane:hover{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,1), 5, 0, 0, 0);
+}

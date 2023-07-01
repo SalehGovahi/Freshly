@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="705.0" style="-fx-border-radius: 5px; -fx-border-color: #e0e0e6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freshly.OffCodeLabel">
+   <children>
+      <Label fx:id="OffPercent" layoutX="613.0" layoutY="6.0" text="30 %">
+         <font>
+            <Font name="IRANYekanWeb Medium" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="600.0" layoutY="44.0" text="تخفیف">
+         <font>
+            <Font name="IRANYekanWeb Medium" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="458.0" layoutY="31.0" text="وضعیت :">
+         <font>
+            <Font name="IRANYekanWeb Medium" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="StatusLabel" layoutX="412.0" layoutY="31.0" text="فعال" textFill="#00cc00">
+         <font>
+            <Font name="IRANYekanWeb Medium" size="18.0" />
+         </font>
+      </Label>
+      <Pane layoutX="28.0" layoutY="24.0" prefHeight="42.0" prefWidth="180.0" styleClass="codePane" stylesheets="@OffCodeLabel.css">
+         <children>
+            <Pane layoutX="-1.0" prefHeight="41.0" prefWidth="55.0" style="-fx-background-color: #00cc00;" styleClass="buttonPane" stylesheets="@OffCodeLabel.css">
+               <children>
+                  <ImageView fx:id="CopyButton" fitHeight="39.0" fitWidth="40.0" layoutX="7.0" onMouseClicked="#CopyButton" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Assets/CopyIcon.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Label fx:id="OffCode" layoutX="84.0" layoutY="5.0" text="FO1402">
+               <font>
+                  <Font name="IRANYekanWeb Medium" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>

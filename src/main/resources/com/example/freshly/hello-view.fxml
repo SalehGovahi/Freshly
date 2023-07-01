@@ -1,26 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freshly.FreshlyController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freshly.FreshlyController">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
             <AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="section" stylesheets="@Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <Pane fx:id="LoginPane" layoutX="263.0" layoutY="59.0" prefHeight="475.0" prefWidth="475.0" styleClass="contentPane" stylesheets="@Style.css" visible="false">
+                  <Pane fx:id="LoginPane" layoutX="263.0" layoutY="59.0" prefHeight="475.0" prefWidth="475.0" styleClass="contentPane" stylesheets="@Style.css">
                      <children>
                         <TextField fx:id="UsenameTextFieldLoginPane" alignment="CENTER_RIGHT" layoutX="73.0" layoutY="146.0" prefHeight="39.0" prefWidth="329.0" promptText="نام کاربری" />
                         <Label fx:id="LoginText" alignment="CENTER_RIGHT" ellipsisString="15" layoutX="200.0" layoutY="101.0" prefHeight="39.0" prefWidth="200.0" styleClass="LoginText" stylesheets="@Style.css" text=" ورود به حساب کاربری" textFill="WHITE" textOverrun="CLIP">
@@ -35,7 +27,7 @@
                         </ImageView>
                         <PasswordField fx:id="PasswordfTextFieldLoginPane" alignment="CENTER_RIGHT" layoutX="73.0" layoutY="200.0" prefHeight="39.0" prefWidth="329.0" promptText="رمز عبور" />
                         <Hyperlink fx:id="ForgotPassword" alignment="CENTER" contentDisplay="CENTER" layoutX="147.0" layoutY="302.0" onAction="#SwitchToForgotPasswordPage" prefHeight="30.0" prefWidth="183.0" styleClass="forgotpassword" stylesheets="@Style.css" text="رمز عبور را فراموش کرده اید؟" textAlignment="CENTER" textFill="WHITE" />
-                        <Button fx:id="LoginButton" alignment="CENTER" cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" layoutX="73.0" layoutY="343.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="329.0" scaleShape="false" styleClass="loginButton" stylesheets="@Style.css" text="ورود" textAlignment="CENTER" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
+                        <Button fx:id="LoginButton" alignment="CENTER" cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" layoutX="73.0" layoutY="343.0" mnemonicParsing="false" onAction="#getLogin" prefHeight="39.0" prefWidth="329.0" scaleShape="false" styleClass="loginButton" stylesheets="@Style.css" text="ورود" textAlignment="CENTER" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -47,7 +39,7 @@
                         <ComboBox fx:id="ChooseRoleComboBoxLoginPane" layoutX="74.0" layoutY="255.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="39.0" prefWidth="329.0" promptText="نقش خود را انتخاب کنید" styleClass="forgotpassword" stylesheets="@Style.css" visibleRowCount="3" />
                      </children>
                   </Pane>
-                  <Pane fx:id="SignupPane" layoutX="263.0" layoutY="59.0" prefHeight="475.0" prefWidth="475.0" styleClass="contentPane" stylesheets="@Style.css">
+                  <Pane fx:id="SignupPane" layoutX="263.0" layoutY="59.0" prefHeight="475.0" prefWidth="475.0" styleClass="contentPane" stylesheets="@Style.css" visible="false">
                      <children>
                         <Label fx:id="CreateAccountText" alignment="CENTER_RIGHT" ellipsisString="15" layoutX="206.0" layoutY="65.0" prefHeight="39.0" prefWidth="200.0" styleClass="LoginText" stylesheets="@Style.css" text=" ثبت نام" textFill="WHITE" textOverrun="CLIP">
                            <font>
@@ -59,7 +51,7 @@
                               <Image url="@../../../../../../../Freshly/Assets/freshlyText.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="CreateAccountButton" alignment="CENTER" cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" layoutX="75.0" layoutY="380.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="329.0" scaleShape="false" styleClass="loginButton" stylesheets="@Style.css" text="ثبت نام" textAlignment="CENTER" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
+                        <Button fx:id="CreateAccountButton" alignment="CENTER" cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" layoutX="75.0" layoutY="380.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="39.0" prefWidth="329.0" scaleShape="false" styleClass="loginButton" stylesheets="@Style.css" text="ثبت نام" textAlignment="CENTER" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -89,7 +81,7 @@
                               <Image url="@Assets/freshlyText.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="ConfirmEmailButton" alignment="CENTER" cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" layoutX="73.0" layoutY="306.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="329.0" scaleShape="false" styleClass="loginButton" stylesheets="@Style.css" text="تایید" textAlignment="CENTER" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
+                        <Button fx:id="ConfirmEmailButton" alignment="CENTER" cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" layoutX="73.0" layoutY="306.0" mnemonicParsing="false" onAction="#rememberForgotPasswordToClient" prefHeight="39.0" prefWidth="329.0" scaleShape="false" styleClass="loginButton" stylesheets="@Style.css" text="تایید" textAlignment="CENTER" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
                            <font>
                               <Font size="16.0" />
                            </font>

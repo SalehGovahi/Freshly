@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<Pane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freshly.SellerPage">
+<Pane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freshly.SellerPage">
    <children>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -56,6 +65,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
+                        <Label fx:id="sellerUsername" layoutX="101.0" layoutY="142.0" text="ADMIN" textFill="WHITE" />
                      </children>
                   </AnchorPane>
                </right>
@@ -105,7 +115,7 @@
                                                 <Cursor fx:constant="DEFAULT" />
                                              </cursor>
                                           </Button>
-                                          <Button layoutX="290.0" layoutY="234.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="102.0" styleClass="addPaneButton" text="بروز رسانی" textAlignment="JUSTIFY">
+                                          <Button layoutX="290.0" layoutY="234.0" mnemonicParsing="false" onAction="#updateButton" prefHeight="46.0" prefWidth="102.0" styleClass="addPaneButton" text="بروز رسانی" textAlignment="JUSTIFY">
                                              <font>
                                                 <Font size="16.0" />
                                              </font>
@@ -157,14 +167,13 @@
                               </AnchorPane>
                               <AnchorPane layoutX="26.0" layoutY="22.0" prefHeight="321.0" prefWidth="910.0" styleClass="tablePane" stylesheets="@SellerPage.css">
                                  <children>
-                                    <TableView fixedCellSize="2.0" layoutX="12.0" layoutY="12.0" prefHeight="298.0" prefWidth="886.0">
+                                    <TableView fx:id="ProductsTable" fixedCellSize="2.0" layoutX="12.0" layoutY="12.0" prefHeight="298.0" prefWidth="886.0">
                                        <columns>
-                                          <TableColumn prefWidth="147.66" text="شناسه کالا" />
-                                          <TableColumn maxWidth="147.66" prefWidth="147.66" text="نام کالا" />
-                                          <TableColumn prefWidth="147.66" text="نوع" />
-                                          <TableColumn prefWidth="147.66" resizable="false" text="موجودی" />
-                                          <TableColumn prefWidth="147.66" text="قیمت" />
-                                          <TableColumn prefWidth="147.66" text="تاریخ" />
+                                          <TableColumn fx:id="IdCol" prefWidth="177.0" text="شناسه کالا" />
+                                          <TableColumn fx:id="NameCol" maxWidth="147.66" prefWidth="177.0" text="نام کالا" />
+                                          <TableColumn fx:id="TypeCol" prefWidth="177.0" text="نوع" />
+                                          <TableColumn fx:id="StockCol" prefWidth="177.0" resizable="false" text="موجودی" />
+                                          <TableColumn fx:id="PriceCol" prefWidth="177.0" text="قیمت" />
                                        </columns>
                                     </TableView>
                                  </children>

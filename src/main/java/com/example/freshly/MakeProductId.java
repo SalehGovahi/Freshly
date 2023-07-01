@@ -20,7 +20,13 @@ public class MakeProductId {
             while (resultSet.next()){
                 prodIds.add(Integer.parseInt(resultSet.getString("productid")));
             }
-            id = prodIds.size() + 1;
+            int max = -1;
+            for (int i = 0; i < prodIds.size(); i++) {
+                if (max < prodIds.get(i)){
+                    max=prodIds.get(i);
+                }
+            }
+            id = max + 1;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }

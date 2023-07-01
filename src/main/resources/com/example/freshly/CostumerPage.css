@@ -1,0 +1,37 @@
+
+
+.titles{
+    -fx-font-family: "IRANYekanWeb Medium";
+    -fx-font-size: 16px;
+    -fx-text-fill: black;
+}
+
+.details{
+    -fx-font-family: "IRANYekanWeb Medium";
+    -fx-font-size: 17px;
+    -fx-text-fill: #4a154b;
+}
+
+.scroll-pane{
+    -fx-background-color: white;
+}
+
+.details2{
+    -fx-font-family: "IRANYekanWeb Light";
+    -fx-font-size: 17px;
+    -fx-text-fill: #4a154b;
+}
+
+.cartTitle{
+    -fx-font-family: "IRANYekanWeb Medium";
+    -fx-font-size: 25px;
+    -fx-text-fill: #4a154b;
+}
+
+.addtoCart{
+    -fx-border-radius: 5px;
+    -fx-border-color:  #e0e0e6;
+    -fx-font-family: "IRANYekanWeb Medium";
+    -fx-font-size: 16px;
+    -fx-background-color: transparent;
+}

@@ -3,7 +3,7 @@
 .filtersNavbar{
     -fx-background-color: white;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,1), 5, 0, 0, 0);
-    -fx-background-radius: 20px;
+    -fx-background-radius: 5px;
     -fx-border-radius: 20px;
     -fx-border-color: white;
 }
@@ -49,4 +49,17 @@
     -fx-background-color: #000000FF;
     -fx-font-family: "IRANSans Medium";
     -fx-border-width: 2px;
+}
+
+.sortItems{
+    -fx-text-fill: #3f4064;
+    -fx-text-fill: #3f4064;
+    -fx-font-family: "B Yekan+";
+    -fx-font-weight: Medium;
+    -fx-font-size: 14px;
+    -fx-minimum-font-size: 14px;
+}
+
+.sortItems:hover{
+    -fx-text-fill: #ff0000;
 }

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freshly.CostumerPage">
+   <children>
+      <Pane layoutX="-2.0" layoutY="49.0" prefHeight="67.0" prefWidth="1200.0" styleClass="header" stylesheets="@MainPage.css">
+         <children>
+            <ImageView fx:id="FreshlyHeader" fitHeight="60.0" fitWidth="158.0" layoutX="1040.0" layoutY="3.0" onMouseClicked="#returnClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/logoHeader.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <TextField fx:id="SearchTextField" alignment="CENTER" depthTest="DISABLE" layoutX="728.0" layoutY="18.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#searching" onMouseClicked="#FixSearchTextField" pickOnBounds="false" prefHeight="30.0" prefWidth="292.0" promptText="جستجو" styleClass="searchBar" stylesheets="@MainPage.css">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Line endX="40.0" layoutX="1014.0" layoutY="33.0" opacity="0.3" rotate="90.0" />
+            <Pane fx:id="unLoginedPane" layoutX="83.0" layoutY="12.0" onMousePressed="#openLoginPage" prefHeight="41.0" prefWidth="131.0" styleClass="loginButton" stylesheets="@MainPage.css">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="51.0" layoutX="93.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" rotate="-180.0">
+                     <image>
+                        <Image url="@Assets/HeaderIcons/login.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="-25.0" layoutY="-2.0" prefHeight="41.0" prefWidth="150.0" styleClass="loginText" stylesheets="@MainPage.css" text="ورود | ثبت نام">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </Pane>
+            <Line endX="25.0" layoutX="58.0" layoutY="33.0" opacity="0.3" rotate="90.0" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="26.0" layoutY="16.0" onMouseClicked="#openCart" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/HeaderIcons/cart.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="24.0" layoutX="990.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/HeaderIcons/search.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="loginedPane" layoutX="78.0" layoutY="8.0" prefHeight="50.0" prefWidth="50.0" visible="false">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutY="-1.0" prefHeight="50.0" prefWidth="1200.0">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/Advertisment.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ScrollPane fx:id="scroll" layoutX="-2.0" layoutY="116.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="583.0" prefWidth="1203.0" styleClass="backwardPane" stylesheets="@MainPage.css">
+         <content>
+            <AnchorPane fx:id="scrollPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="958.0" prefWidth="1199.0" styleClass="backwardPane" stylesheets="@MainPage.css">
+               <children>
+                  <Pane layoutY="737.0" prefHeight="223.0" prefWidth="1188.0" styleClass="footer" stylesheets="@MainPage.css">
+                     <children>
+                        <Label cacheShape="false" centerShape="false" contentDisplay="CENTER" depthTest="DISABLE" focusTraversable="false" graphicTextGap="0.0" layoutX="559.0" layoutY="19.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="false" prefHeight="36.0" prefWidth="139.0" scaleShape="false" styleClass="fastAccess" text="دسترسی سریع" textAlignment="JUSTIFY">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </Label>
+                        <Button layoutX="627.0" layoutY="111.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="66.0" styleClass="typeButtonFooter" stylesheets="@MainPage.css" text="نوشیدنی">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="644.0" layoutY="165.0" mnemonicParsing="false" styleClass="typeButtonFooter" stylesheets="@MainPage.css" text="لبنیات">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button graphicTextGap="0.0" layoutX="641.0" layoutY="138.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="52.0" styleClass="typeButtonFooter" stylesheets="@MainPage.css" text="تنقلات">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="602.0" layoutY="85.0" mnemonicParsing="false" styleClass="typeButtonFooter" stylesheets="@MainPage.css" text="مواد پروتئینی">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="537.0" layoutY="58.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="155.0" styleClass="typeButtonFooter" stylesheets="@MainPage.css" text="کالاهای اساسی و خواروبار">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ImageView fitHeight="155.0" fitWidth="191.0" layoutX="1022.0" layoutY="-41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/logoFooter.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="182.0" fitWidth="360.0" layoutX="813.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/DescriptionTextFooter.png" />
+                           </image>
+                        </ImageView>
+                        <Circle fill="DODGERBLUE" layoutX="693.0" layoutY="75.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke-width: 0px;" />
+                        <Circle fill="DODGERBLUE" layoutX="693.0" layoutY="103.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke-width: 0px;" />
+                        <Circle fill="DODGERBLUE" layoutX="693.0" layoutY="129.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke-width: 0px;" />
+                        <Circle fill="DODGERBLUE" layoutX="693.0" layoutY="155.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke-width: 0px;" />
+                        <Circle fill="DODGERBLUE" layoutX="693.0" layoutY="182.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke-width: 0px;" />
+                        <Label layoutX="341.0" layoutY="19.0" styleClass="fastAccess" text="ارتباط با ما">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Circle fill="DODGERBLUE" layoutX="424.0" layoutY="75.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke-width: 0px;" />
+                        <Button layoutX="347.0" layoutY="86.0" mnemonicParsing="false" styleClass="typeButtonFooter" text="تماس با ما" />
+                        <Circle fill="DODGERBLUE" layoutX="424.0" layoutY="103.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke-width: 0px;" />
+                        <Button layoutX="362.0" layoutY="111.0" mnemonicParsing="false" styleClass="typeButtonFooter" text="درباره ما" />
+                        <Button layoutX="320.0" layoutY="59.0" mnemonicParsing="false" styleClass="typeButtonFooter" text="قوانین و مقررات" />
+                        <Circle fill="DODGERBLUE" layoutX="424.0" layoutY="129.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke-width: 0px;" />
+                        <ImageView fitHeight="127.0" fitWidth="99.0" layoutX="31.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/etemadLogoFooter.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="127.0" fitWidth="99.0" layoutX="143.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/neshanLogoFooter.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="30.0" layoutY="26.0" prefHeight="537.0" prefWidth="1131.0" styleClass="mainPane" stylesheets="@ProductPage.css">
+                     <children>
+                        <Line endX="919.0667114257812" layoutX="165.0" layoutY="61.0" startX="-120.60002136230469" style="-fx-stroke: #e0e0e6;" />
+                        <Label fx:id="PersonalInformationButton" layoutX="911.0" layoutY="23.0" onMouseClicked="#ShowPersonalInformation" styleClass="titles" stylesheets="@CostumerPage.css" text="اطلاعات شخصی" textFill="#4a154b">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Label>
+                        <Label fx:id="BuyingHistoryButton" layoutX="715.0" layoutY="23.0" onMouseClicked="#ShowBuyingHistory" styleClass="titles" stylesheets="@CostumerPage.css" text="سابقه خرید ها">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="OffCodeButton" layoutX="513.0" layoutY="23.0" onMouseClicked="#showOffCodes" styleClass="titles" stylesheets="@CostumerPage.css" text="کد تخفیف ها">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Label>
+                        <ImageView fx:id="PersonalLine" fitHeight="18.0" fitWidth="119.0" layoutX="905.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@Assets/lineCart.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="HistoryLine" fitHeight="31.0" fitWidth="105.0" layoutX="712.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@Assets/lineCart.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="OffCode" fitHeight="18.0" fitWidth="98.0" layoutX="508.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@Assets/lineCart.png" />
+                           </image>
+                        </ImageView>
+                        <Pane fx:id="PersonalInformationPane" layoutX="43.0" layoutY="90.0" prefHeight="151.0" prefWidth="1043.0" styleClass="buyingOptions" stylesheets="@ProductPage.css" visible="false">
+                           <children>
+                              <Label layoutX="924.0" layoutY="36.0" styleClass="details" stylesheets="@CostumerPage.css" text="نام :" />
+                              <Label layoutX="673.0" layoutY="37.0" styleClass="details" stylesheets="@CostumerPage.css" text="نام خانوادگی :" />
+                              <Label layoutX="925.0" layoutY="79.0" styleClass="details" stylesheets="@CostumerPage.css" text="نام کاربری :" />
+                              <Label layoutX="398.0" layoutY="37.0" styleClass="details" stylesheets="@CostumerPage.css" text="ایمیل :" />
+                              <Label layoutX="674.0" layoutY="79.0" styleClass="details" stylesheets="@CostumerPage.css" text="رمز عبور :" />
+                              <Label layoutX="398.0" layoutY="79.0" styleClass="details" stylesheets="@CostumerPage.css" text="شماره تلفن :" />
+                              <Label fx:id="PersonalInformationName" layoutX="842.0" layoutY="36.0" styleClass="details2" stylesheets="@CostumerPage.css" text="محمدصالح" textFill="#e4e4e4" />
+                              <Label fx:id="PersonalInformationFamily" layoutX="622.0" layoutY="37.0" styleClass="details2" stylesheets="@CostumerPage.css" text="گواهی" textFill="#e4e4e4" />
+                              <Label fx:id="PersonalInformationUsername" layoutX="877.0" layoutY="78.0" styleClass="details2" stylesheets="@CostumerPage.css" text="Saleh" textFill="#e4e4e4" />
+                              <Label fx:id="PersonalInformationEmail" layoutX="203.0" layoutY="38.0" styleClass="details2" stylesheets="@CostumerPage.css" text="saleh.govahi@gmail.com" textFill="#e4e4e4" />
+                              <Label fx:id="PersonalInformationPassword" layoutX="589.0" layoutY="78.0" styleClass="details2" stylesheets="@CostumerPage.css" text="saleh1382" textFill="#e4e4e4" />
+                              <Label fx:id="PersonalInformationPhoneNumber" layoutX="286.0" layoutY="78.0" styleClass="details2" stylesheets="@CostumerPage.css" text="09361419363" textFill="#e4e4e4" />
+                           </children>
+                        </Pane>
+                        <ScrollPane fx:id="BuyingHistoryScrollPane" layoutX="204.0" layoutY="98.0" prefHeight="408.0" prefWidth="694.0" style="-fx-background-color: white; -fx-border-color: white;" visible="false">
+                           <content>
+                              <GridPane fx:id="BuyingGridPane" prefHeight="410.0" prefWidth="694.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="0.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" percentHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                        <Label layoutX="332.0" layoutY="23.0" onMouseClicked="#showCart" styleClass="titles" stylesheets="@CostumerPage.css" text="کیف پول">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label layoutX="145.0" layoutY="23.0" onMouseClicked="#showAuctions" styleClass="titles" stylesheets="@CostumerPage.css" text="مزایده ها">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <ImageView fx:id="AuctionLine" fitHeight="12.0" fitWidth="82.0" layoutX="133.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Assets/lineCart.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="CartLine" fitHeight="12.0" fitWidth="82.0" layoutX="320.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@Assets/lineCart.png" />
+                           </image>
+                        </ImageView>
+                        <ScrollPane fx:id="OffCodesScroll" layoutX="204.0" layoutY="98.0" prefHeight="408.0" prefWidth="710.0" visible="false">
+                           <content>
+                              <GridPane fx:id="OffCodeGrid" prefHeight="411.0" prefWidth="713.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="0.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" percentHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                              </GridPane>
+                           </content></ScrollPane>
+                        <Pane fx:id="CartPane" layoutX="252.0" layoutY="116.0" prefHeight="348.0" prefWidth="659.0" style="-fx-border-radius: 5px; -fx-border-color: #e0e0e6;" visible="false">
+                           <children>
+                              <Label layoutX="279.0" layoutY="49.0" styleClass="cartTitle" stylesheets="@CostumerPage.css" text="موجودی کیف پول شما :">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="177.0" layoutY="50.0" styleClass="cartTitle" stylesheets="@CostumerPage.css" text="240,000" />
+                              <ImageView fitHeight="60.0" fitWidth="44.0" layoutX="123.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Assets/Toman.png" />
+                                 </image>
+                              </ImageView>
+                              <Pane fx:id="PaymentOpening" layoutX="138.0" layoutY="97.0" prefHeight="200.0" prefWidth="403.0" visible="false">
+                                 <children>
+                                    <TextField layoutX="51.0" layoutY="98.0" />
+                                    <Label layoutX="211.0" layoutY="96.0" text="مبلغ مورد نظر :">
+                                       <font>
+                                          <Font name="IRANYekanWeb Medium" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="85.0" layoutY="145.0" mnemonicParsing="false" styleClass="addtoCart" stylesheets="@CostumerPage.css" text="تایید و ورود به صفحه پرداخت" />
+                                 </children>
+                              </Pane>
+                              <Button layoutX="233.0" layoutY="116.0" mnemonicParsing="false" onAction="#showPaymentPane" prefHeight="45.0" prefWidth="199.0" styleClass="addtoCart" stylesheets="@CostumerPage.css" text="افزایش موجودی کیف پول">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <ScrollPane fx:id="AuctionScroll" layoutX="204.0" layoutY="98.0" prefHeight="408.0" prefWidth="710.0">
+                           <content>
+                              <GridPane fx:id="AuctionGridPane" prefHeight="407.0" prefWidth="710.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="0.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" percentHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</Pane>

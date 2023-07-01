@@ -11,7 +11,7 @@ public class ImageCopy {
 
     public static String copyfile(String path, String id) {
         int a = path.lastIndexOf("\\");
-        System.out.println(a);
+        //System.out.println(a);
         String mainPath = "";
         ++a;
 
@@ -19,12 +19,12 @@ public class ImageCopy {
             mainPath = mainPath + path.charAt(i);
         }
 
-        System.out.println(mainPath);
+        //System.out.println(mainPath);
         File sourceImage = new File(path);
         String newPath = "src/main/resources/com/example/freshly/ProductsImages/";
         String newPath_endOfFile = newPath + "product_id" + id + mainPath;
         ++count;
-        System.out.println(newPath_endOfFile);
+        //System.out.println(newPath_endOfFile);
         Path destinationPath = Path.of(newPath_endOfFile);
 
         try {
